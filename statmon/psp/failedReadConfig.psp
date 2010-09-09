@@ -1,0 +1,6 @@
+
+<div class="fixed-tint">
+	<div class="center-group" style="margin-top:10em; padding-right: 1em;">
+	<%= c.dialogTable %>
+	</div>
+</div>

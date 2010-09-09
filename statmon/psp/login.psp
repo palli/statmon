@@ -1,0 +1,62 @@
+<form action="<%= c.action %>" method="post">
+<div class="fixed-tint">
+	<div style="margin:0 auto; position: absolute;  bottom: 50%; margin-bottom: -4em; left: 50%; margin-left: -10.6em;">
+		<div class="shadow-drop">
+			<!-- Input Box begins -->
+			<div class="searchbox">
+				<div id="calendar-container"></div>
+				<table class="proplist filter">
+					<thead>
+						<tr class="top title even">
+							<td colspan="3">Login</td>
+						</tr>
+					</thead>
+					<tfoot>
+						<tr class="body even">
+							<td class="button" colspan="2">
+								<input type="hidden" value="1" name="login">
+								<input class="submit commit" value="Login" type="submit"  tabindex="4"/>
+							</td>
+						</tr>
+					</tfoot>
+					<tbody class="highlight">
+						<tr class="body odd ii_user">
+							<td class="propname ">
+								Username
+							</td>
+							<td class="propval text">
+								<input class="text" tabindex="1" name="user" type="text" value="<%= c.user %>"/>
+							</td>
+						</tr>
+						<tr class="body even ii_pass">
+							<td class="propname ">
+								Password
+							</td>
+							<td class="propval text">
+								<input class="text" tabindex="2" name="pass" type="password" value=""/>
+							</td>
+						</tr>
+						<tr class="body odd ii_user">
+							<td class="propname">
+								<input class="checkbox" tabindex="3" name="remember" type="checkbox" <%= (c.remember or '') and 'checked="checked"'%>/>
+							</td>
+							<td class="propval text">
+								Remember me
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div><!-- Input Box end -->
+			<div class="shadow-drop-cc"><div class="ie-fix"></div></div>
+			<div class="shadow-drop-tl"></div>
+			<div class="shadow-drop-top"><div class="ie-fix"></div></div>
+			<div class="shadow-drop-tr"></div>
+			<div class="shadow-drop-right"><div class="ie-fix"></div></div>
+			<div class="shadow-drop-br"></div>
+			<div class="shadow-drop-bottom"><div class="ie-fix"></div></div>
+			<div class="shadow-drop-bl"></div>
+			<div class="shadow-drop-left"><div class="ie-fix"></div></div>
+		</div><!-- end shadow-drop -->
+	</div>
+</div>
+</form>

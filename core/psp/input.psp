@@ -1,0 +1,113 @@
+<!-- Input Box begins -->
+<%
+if not c.omitFormTag:
+%>
+<form action="">
+<%
+# end if
+%>
+<div class="searchbox">
+<%
+for var,value in c.hiddenVars.items():
+%>
+	<input type="hidden" name="<%= var %>" value="<%= value %>"></input>
+<%
+#end
+%>
+	<div id="calendar-container"></div>
+	<table class="proplist filter">
+<%
+if c.name:
+%>
+		<thead>
+			<tr class="top title <%= c.evenOdd(reset=True) %>">
+				<td colspan="4"><%= c.name %></td>
+			</tr>
+		</thead>
+<%
+# end if
+%>
+		<tfoot>
+			<tr class="body <%= c.evenOdd(reset=True) %>">
+				<td class="button" colspan="<%= 1+(not c.defaultButton) %>">
+					<input class="submit commit" value="<%= c.applyButton %>" type="submit"/>
+				</td>
+<%
+if c.defaultButton:
+%>
+				<td class="button">
+					<input class="submit default" value="<%= c.defaultButton %>" type="submit" name="default<%=c.unique%>"/>
+				</td>
+<%
+# end if
+%>
+				<td></td>
+			</tr>
+		</tfoot>
+		<tbody class="highlight">
+<%
+for i in c.items:
+%>
+			<tr class="body <%= c.evenOdd() %> ii_<%= i.sname %>">
+				<td class="propname <%= i.getNameClass() %>">
+					<%= i.name %>
+				</td>
+				<td class="propval <%= i.getValClass() %>">
+<%
+	if i.itype in (i.TEXT, i.DATE, i.NUMBER):
+%>
+					<input id="<%= i.getTypeID('ip') %>" class="text" name="<%= i.sname %>" type="text" value="<%= c.escape( i.val ) %>"/>
+<%
+	elif i.itype in (i.PASS):
+%>
+					<input id="<%= i.getTypeID('ip') %>" class="text" name="<%= i.sname %>" type="password" value="<%= c.escape( i.val ) %>"/>
+<%
+	elif i.itype in (i.DROPDOWN):
+%>
+					<select name="<%= i.sname %>">
+<%
+		for o in i.options:
+%>
+						<option value="<%= c.escape( o[0] ) %>" <%= i.selected[o[0]] %>>
+							<%= c.escape( o[-1] ) %>
+						</option>
+<%
+		#end for
+%>
+					</select>
+<%
+	#end if
+%>
+				</td>
+				<td class="proptype">
+					<div id="<%= i.getTypeID('bt') %>" class="<%= i.getValClass() %>"></div>
+				</td>
+			</tr>
+<%
+#end for
+%>
+		</tbody>
+	</table>
+</div>
+<%
+if not c.omitFormTag:
+%>
+</form>
+<%
+# end if
+for i in c.items:
+	if i.itype in (i.DATE):
+%>
+<script type="text/javascript">
+    Calendar.setup({
+        inputField     :    "<%= i.getTypeID('ip') %>",     // id of the input field
+        ifFormat       :    "%Y-%m-%d",      // format of the input field
+        button         :    "<%= i.getTypeID('bt') %>",  // trigger for the calendar (button ID)
+        align          :    "BL",           // alignment (defaults to "Bl")
+        singleClick    :    true
+    });
+</script>
+<%
+# end for
+%>
+<!-- Input Box end -->

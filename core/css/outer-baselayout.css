@@ -1,0 +1,53 @@
+
+/* reset everything to get a common platform */
+* {
+	font-size: inherit;
+	margin: 0;
+	padding: 0;
+	border: 0;
+	list-style: none;
+}
+
+#header {
+	position: fixed;
+	left: 0;
+	top: 0;
+	right: 0;
+	z-index:5; /*top most*/
+}
+
+#left {
+	position: fixed;
+	left:0;
+	top:2em;
+	bottom:2em;
+	width:13em;
+	z-index:4;
+	overflow:auto;
+}
+
+#content {
+	position:absolute;
+	z-index:3;
+	padding-top: 3em;
+	padding-left: 14.5em;
+	height: 1%; /* firefox height calculation bug work around with non-default font size */
+}
+
+#footer {
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	z-index:5; /*top most*/
+}
+
+/*#footer, #left, #header { 
+	display: none;
+}*/
+
+#content .spacer {
+	float: left;
+	clear: both;
+	height: 2em;
+}

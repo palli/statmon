@@ -1,0 +1,10 @@
+
+<%= c.displayGraph(c.graphFilespace) %>
+
+<div class="container">
+	<%= c.alertTable %>
+</div>
+
+<div class="new-row list">
+	<%= c.filespaceTable %>
+</div>

@@ -1,0 +1,2 @@
+
+<%= c.displayGraph( c.theGraph, directLink = True ) %>

@@ -1,0 +1,13 @@
+ DataFetcher
+     |
+     |
+  __init__        _query
+     |             /
+     |            /
+     1)---- __getData --- _data
+     |               _______/
+     |              /
+     2)---- __parseData
+                  |\_ _dataTimes
+                   \_ _dataValues
+

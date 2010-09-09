@@ -1,0 +1,41 @@
+
+<div class="container">
+	<%= c.alertTable %>
+</div>
+
+<div class="container placeholder">
+<%= c.shadowdrop('''
+	<div class="text-box" style="width: 41em; height: 10em; padding: 0">
+		<div class="center-group" style="margin-top:2em; font-weight: bolder;">
+		TODO: Implement pager (see example below)<br/>
+		TODO: Display viewer entries per page<br/>
+		TODO: User selected number of entries per page<br/>
+		Finally figure out what to do with this space
+<!-- 	???	... profit! -->
+		</div>
+	</div> ''')%>
+</div>
+
+<div class="container placeholder new-row">
+<%= c.shadowdrop('''
+	<div class="text-box" style="width: 83em; height: 2em; padding: 0">
+		<div class="center-group" style="margin-top:.5em; font-weight: bolder;">
+		TODO: Pages: first : previous : 1 [2] 3 4 5 6 7 8 9 ... : next : last (151)
+		</div>
+	</div> ''')%>
+</div>
+
+<!-- Here begin Actlog records -->
+<div class="list new-row">
+<%= c.actlogTable %>
+</div>
+<!-- here end actlog records -->
+
+<div class="container placeholder new-row">
+<%= c.shadowdrop('''
+	<div class="text-box" style="width: 83em; height: 2em; padding: 0">
+		<div class="center-group" style="margin-top:.5em; font-weight: bolder;">
+		TODO: Pages: first : previous : 1 [2] 3 4 5 6 7 8 9 ... : next : last (151)
+		</div>
+	</div> ''')%>
+</div>

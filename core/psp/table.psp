@@ -1,0 +1,106 @@
+<!-- begin table.psp -->
+	<table class="list <%= c.className %>" id="<%= c.name + '_tbl' %>">
+		<thead id="<%= c.name + '_head' %>">
+<%
+if c.title:
+%>
+			<tr class="nopretty title <%= c.evenOdd(reset=True) %>">
+				<td class="nopadding top" colspan="<%= len(c._headers) %>"><div class="title">
+<%
+	if c.enableExport:
+%>
+							<a class="button" href="?<%= c.exportURL %>"><span class="export">&nbsp;</span></a>
+<%
+	else:
+%>
+							<a class="button" href="#"><span class="inactive">&nbsp;</span></a>
+<%
+	# end if export
+%>
+							<%= c.title %>
+				</div></td>
+			</tr>
+<%
+# end if
+%>
+<%
+sortable=True
+if not c._rows: sortable=False
+if c._headers and c.showHeaders:
+%>
+				<tr class="top <%= c.evenOdd(reset=True) %>">
+<%
+	for col in c._headers:
+%>
+				<td class="<%= col.getHeadClass(sortable) %> _<%= col.sname %>"><%= col.getHead(sortable) %></td>
+<%
+	#end for headers
+%>
+			</tr>
+<%
+# end if headers
+%>
+		</thead>
+<%
+if c.hasFooter or c.extraFooter:
+%>
+		<tfoot id="<%= c.name + '_foot' %>">
+<%
+	if c.hasFooter:
+%>
+			<tr class="bottom <%= c.evenOdd(once=len(c._rows)) %>">
+<%
+		for col in c._headers:
+%>
+				<td class="<%= col.getFootClass() %> _<%= col.sname %>"><%= col.getFoot() %></td>
+<%
+		#end for headers
+%>
+			</tr>
+<%
+	if c.extraFooter:
+%>
+			<tr class="body <%= c.evenOdd(once=len(c._rows)) %>">
+				<td class="<%=c.extraFooterClass%>" colspan="<%= len(c._headers) %>"><%=c.extraFooter%></td>
+			</tr>
+<%
+	# end extraFooter
+%>
+		</tfoot>
+<%
+#end if footer
+if c._rows or c._emptyMessage:
+%>
+		<tbody class="highlight" id="<%= c.name + '_body' %>" >
+<%
+	for row in c._rows:
+%>
+			<tr class="body <%= c.evenOdd() %><%= row[-2] %> <%= row[-1] %>">
+<%
+		for i in range(len(c._headers)):
+			col = c._headers[i]
+			value = row[i][c.formatIndex]
+%>
+				<td class="<%= col.getBodyClass() %> _<%= col.sname %>"><%= value %></td>
+<%
+		#end for cols
+%>
+		    </tr>
+<%
+	#end for rows
+	if not c._rows:
+%>
+			<tr class="empty body <%= c.evenOdd() %>">
+				<td class="empty"  colspan="<%= len(c._headers) %>">
+					<%= c._emptyMessage %>
+				</td>
+			</tr>
+<%
+	# end if empty
+%>
+		</tbody>
+<%
+#end if body
+%>
+	</table>
+<!-- end table.psp -->

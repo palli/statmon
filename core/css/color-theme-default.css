@@ -1,0 +1,277 @@
+
+body {
+	color: #555;
+}
+
+input, select {
+	border-color: #999;
+}
+
+#footer a,
+#left a, input, select {
+	color: #555;
+}
+
+a,
+#footer a:hover,
+#content a,
+#left a:hover {
+	color: #559;
+}
+
+#content a:hover {
+	color: #55f;
+}
+
+#body thead tr.title td a,
+#menu tr.grandparent a {
+	color: #eee;
+}
+
+#body thead tr.title a:hover,
+#menu tr.grandparent a:hover {
+	color: #dfdfff;
+}
+
+.inactive {
+	color: #999;
+}
+
+thead tr.title .button {
+	background-color: #304e98;
+}
+
+thead tr.title .button:hover {
+	background-color: #162f7e;
+}
+
+tfoot td.button {
+	background-color: #e2f1ff; /* metalic overlayed with pure blue */
+}
+
+tfoot td.button:hover {
+	background-color: #c8e4ff;
+}
+
+#header {
+	border-color: #999;
+}
+
+#footer {
+	border-color: #999;
+}
+
+#body {
+	background-color: #f6f6f5;
+}
+
+#left {
+	background-color: #eee;
+	border-color: #999;
+}
+
+ul.level0 li li,
+#menu-container .menu {
+	background-color: #f5f5f5;
+}
+
+ul.level0 li li:hover,
+#menu-container .menu tr:hover,
+#menu-container .menu tr.active,
+#menu-container .menu tr.hasActiveChild {
+	/* single overlay */
+	background-color: #d9d9ff;
+}
+
+#menu-container .menu tr.active:hover,
+#menu-container .menu tr.hasActiveChild:hover {
+	/* double overlay */
+	background-color: #8686ff;
+}
+
+.altcolor thead tr.title td.top,
+#menu-container .menu tr.grandparent {
+	background-color: #80ac36;
+}
+
+.altcolor thead tr.title .button,
+#menu-container .menu tr.grandparentActive,
+#menu-container .menu tr.grandparent:hover {
+	background-color: #6f9336;
+}
+
+.altcolor thead tr.title .button:hover {
+	background-color: #465e1a;
+}
+
+div.text-box,
+.filter td.proptype div,
+table,
+td,
+ul.level0 ul,
+ul.level0 ul li,
+#body td .button {
+	border-color: #999;
+}
+
+thead tr.title td,
+#menu-container tr.grandparent {
+	color: #eee;
+	background-color: #4b6db3;
+}
+
+thead tr td,
+tfoot tr td {
+	background-color: #f0f8ff; /* metalic */
+}
+
+thead td:hover,
+thead td.sorted,
+tfoot td.sorted {
+	background-color: #e2f1ff; /* metalic overlayed with pure blue */
+}
+
+thead td.sorted:hover {
+	background-color: #c8e4ff;
+}
+
+tbody tr.even {
+	background-color:#efefef;
+}
+
+tbody tr.evenChecked {
+	background-color:#eff6e1;
+}
+
+tbody tr.evenPending {
+	background-color:#f6e2e2;
+}
+
+tbody tr.odd {
+	background-color:#f9f9f9;
+}
+
+tbody tr.oddChecked {
+	background-color:#f9fbf3;
+}
+
+tbody tr.oddPending {
+	background-color:#fbf3f4;
+}
+
+tbody tr.even td.sorted {
+	background-color:#e0e0ef;
+}
+
+tbody tr.evenChecked td.sorted {
+	background-color:#d3e7aa;
+}
+
+tbody tr.evenPending td.sorted {
+	background-color:#e7abab;
+}
+
+tbody tr.oddChecked td.sorted {
+ 	background-color:#eff6e1;
+}
+
+tbody tr.oddPending td.sorted {
+ 	background-color:#f6e2e2;
+}
+
+/* highlighting */
+.legends tbody.highlight:hover tr.even,
+tbody.highlight tr.even:hover {
+	/* even overlayed with pure blue */
+	background-color:#c3c3ff;
+}
+tbody.highlight tr.odd:hover {
+	/* odd overlayed with pure blue */
+	background-color:#d3d3ff;
+}
+tbody.highlight tr.even:hover td.sorted {
+	/* even double overlayed with pure blue */
+	background-color:#9898ff;
+}
+tbody.highlight tr.odd:hover td.sorted {
+	/* odd double overlayed with pure blue */
+	background-color:#afafff;
+}
+
+/* hover - checked */
+tbody.highlight tr.evenChecked:hover {
+	background-color:#b2d66c;
+}
+
+tbody.highlight tr.oddChecked:hover {
+	background-color:#c5e090;
+}
+
+tbody.highlight tr.evenChecked:hover td.sorted {
+	background-color:#a0cc48;
+}
+
+tbody.highlight tr.oddChecked:hover td.sorted {
+	background-color:#b2d66c;
+}
+
+/* hover - pending */
+tbody.highlight tr.evenPending:hover {
+	background-color:#d66f6c;
+}
+
+tbody.highlight tr.oddPending:hover {
+	background-color:#e09290;
+}
+
+tbody.highlight tr.evenPending:hover td.sorted {
+	background-color:#cc4b48;
+}
+
+tbody.highlight tr.oddPending:hover td.sorted {
+	background-color:#d66f6c;
+}
+
+/*tr.odd td.heven {
+	background-color: blue;
+}*/
+
+tr.odd td.hodd {
+	background-color: #f3f3f3;
+}
+
+/*tr.even td.heven {
+	background-color: green;
+}*/
+
+tr.even td.hodd {
+	background-color: #e7e7e7;
+}
+
+span.good {
+/* 	#555 + 50% dodge pure green */
+	color: #55a955;
+}
+span.poor {
+/* 	#555 + 50% dodge pure yellow + 50% dodge pure red */
+	color: #d3a955;
+}
+span.bad,
+.filter td.badval {
+/* 	#555 + 50% dodge pure red */
+	color: #a95555;
+}
+
+div.text-box {
+	background-color: white;
+}
+
+thead td.sunday,
+thead td.saturday {
+	color: #955;
+}
+
+td.sunday,
+td.saturday {
+	color: #844;
+}

@@ -1,0 +1,246 @@
+/* rnd: (0.941922,0.823570,0.428033) */
+
+body {
+	color:#484848;
+}
+
+input, select {
+	border-color:#7c7c7c;
+}
+
+#footer a,
+#left a, input, select {
+	color:#484848;
+}
+
+a,
+#footer a:hover,
+#content a,
+#left a:hover {
+	color:#4d5d7c;
+}
+
+#content a:hover {
+	color:#5f90eb;
+}
+
+#body thead tr.title td a {
+	color:#d7d7d7;
+}
+
+#body thead tr.title a:hover {
+	color:#bac4d7;
+}
+
+thead tr.title .button {
+	background-color:#336784;
+}
+
+thead tr.title .button:hover {
+	background-color:#17486a;
+}
+
+tfoot td.button {
+	background-color:#e3fbff; /* metalic overlayed with pure blue */
+}
+
+tfoot td.button:hover {
+	background-color:#ccf8ff;
+}
+
+#header {
+	border-color:#7c7c7c;
+}
+
+#footer {
+	border-color:#7c7c7c;
+}
+
+#body {
+	background-color:#f3f3f2;
+}
+
+#left {
+	background-color:#d7d7d7;
+	border-color:#7c7c7c;
+}
+
+#menu-container .menu {
+	background-color:#f2f2f2;
+}
+
+#menu-container .menu tr:hover,
+#menu-container .menu tr.active,
+#menu-container .menu tr.hasActiveChild {
+	/* single overlay */
+	background-color:#dbe7ff;
+}
+
+#menu-container .menu tr.active:hover,
+#menu-container .menu tr.hasActiveChild:hover {
+	/* double overlay */
+	background-color:#99bcff;
+}
+
+#menu-container .menu tr.grandparent {
+	background-color:#bfbd51;
+}
+
+#menu-container .menu tr.grandparentActive,
+#menu-container .menu tr.grandparent:hover {
+	background-color:#a2a14e;
+}
+
+div.text-box,
+.filter td.proptype div,
+table,
+td,
+#body td .button {
+	border-color:#7c7c7c;
+}
+
+thead tr.title td {
+	color:#d7d7d7;
+	background-color:#5187a2;
+}
+
+thead tr td,
+tfoot tr td {
+	background-color:#f0fdff; /* metalic */
+}
+
+thead td:hover,
+thead td.sorted,
+tfoot td.sorted {
+	background-color:#e3fbff; /* metalic overlayed with pure blue */
+}
+
+thead td.sorted:hover {
+	background-color:#ccf8ff;
+}
+
+tbody tr.even {
+	background-color:#eaeaea;
+}
+
+tbody tr.evenChecked {
+	background-color:#f3f3df;
+}
+
+tbody tr.evenPending {
+	background-color:#f3e0e7;
+}
+
+tbody tr.odd {
+	background-color:#f7f7f7;
+}
+
+tbody tr.oddChecked {
+	background-color:#faf9f2;
+}
+
+tbody tr.oddPending {
+	background-color:#faf2f6;
+}
+
+tbody tr.even td.sorted {
+	background-color:#dce1ea;
+}
+
+tbody tr.evenChecked td.sorted {
+	background-color:#e0dfaa;
+}
+
+tbody tr.evenPending td.sorted {
+	background-color:#e0abbd;
+}
+
+tbody tr.oddChecked td.sorted {
+ 	background-color:#f3f3df;
+}
+
+tbody tr.oddPending td.sorted {
+ 	background-color:#f3e0e7;
+}
+
+/* highlighting */
+.legends tbody.highlight:hover tr.even,
+tbody.highlight tr.even:hover {
+	/* even overlayed with pure blue */
+	background-color:#c8dbff;
+}
+tbody.highlight tr.odd:hover {
+	/* odd overlayed with pure blue */
+	background-color:#d5e4ff;
+}
+tbody.highlight tr.even:hover td.sorted {
+	/* even double overlayed with pure blue */
+	background-color:#a5c5ff;
+}
+tbody.highlight tr.odd:hover td.sorted {
+	/* odd double overlayed with pure blue */
+	background-color:#b7d0ff;
+}
+
+/* hover - checked */
+tbody.highlight tr.evenChecked:hover {
+	background-color:#cbca76;
+}
+
+tbody.highlight tr.oddChecked:hover {
+	background-color:#d7d693;
+}
+
+tbody.highlight tr.evenChecked:hover td.sorted {
+	background-color:#bfbd51;
+}
+
+tbody.highlight tr.oddChecked:hover td.sorted {
+	background-color:#cbca76;
+}
+
+/* hover - pending */
+tbody.highlight tr.evenPending:hover {
+	background-color:#cb7692;
+}
+
+tbody.highlight tr.oddPending:hover {
+	background-color:#d793a9;
+}
+
+tbody.highlight tr.evenPending:hover td.sorted {
+	background-color:#bf5175;
+}
+
+tbody.highlight tr.oddPending:hover td.sorted {
+	background-color:#cb7692;
+}
+
+span.good {
+/* 	#555 + 50% dodge pure green */
+	color:#6e9758;
+}
+span.poor {
+/* 	#555 + 50% dodge pure yellow + 50% dodge pure red */
+	color:#c78160;
+}
+span.bad,
+.filter td.badval {
+/* 	#555 + 50% dodge pure red */
+	color:#97586e;
+}
+
+div.text-box {
+	background-color: white;
+}
+
+thead td.sunday,
+thead td.saturday {
+	color:#7c4d5d;
+}
+
+td.sunday,
+td.saturday {
+	color:#6b3e4e;
+}
+

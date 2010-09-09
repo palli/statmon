@@ -1,0 +1,52 @@
+
+<div class="top-group left-group new-row">
+	<div class="left-group">
+		<!-- Server Information -->
+		<div class="container">
+			<%= c.serverInfoTable %>
+		</div> <!-- end server info -->
+
+		<!-- begin last 24 hour -->
+		<div class="container">
+			<%= c.last24InfoTable %>
+		</div> <!-- end last 24 hour -->
+	</div>
+	<div class="left-group">
+		<!-- Storage Abusers -->
+		<div class="container">
+			<%= c.abuseTable %>
+		</div> <!-- end storage abusers -->
+
+		<!-- Nodes By OS -->
+		<div class="container">
+			<%= c.osTable %>
+		</div> <!-- End Nodes By OS -->
+	</div>
+</div>
+
+<!-- graphs begin -->
+<div class="middle-group graphs new-row">
+	<div class="left-group">
+		<%= c.displayGraph(c.graphDailyBackup) %>
+		<%= c.displayGraph(c.graphTotalBackup) %>
+	</div>
+	<div class="left-group">
+		<%= c.displayGraph(c.graphTSMLogSize) %>
+		<%= c.displayGraph(c.graphTSMDatabaseSize) %>
+	</div>
+</div>
+<!-- graphs end -->
+
+<!-- Here come the alerts -->
+<div class="left-group new-row">
+<%
+for alertTable in c.alertTables:
+%>
+	<div class="container">
+		<%= alertTable %>
+	</div>
+<%
+#end
+%>
+</div> <!-- End of alerts -->
+

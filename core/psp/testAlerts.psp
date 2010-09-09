@@ -1,0 +1,26 @@
+
+<div class="filter">
+	<%= c.shadowdrop( c.simpleInput ) %>
+</div>
+
+<div class="container">
+	<%= c.simpleProps %>
+</div>
+
+<div class="list">
+	<%= c.simpleTable %>
+</div>
+
+<%
+for i in c.t:
+%>
+<div class="new-row container">
+	<%= c.shadowdrop('''
+		<div class="new-row text-box"><h2>%s:</h2> %3.3f sec</div>
+	''' % (i['item'],i['time']) ) %>
+</div>
+
+<div class="new-row container"><%= i['alert'] %></div>
+<%
+#end for
+%>

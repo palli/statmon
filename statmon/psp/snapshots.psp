@@ -1,0 +1,12 @@
+
+<div class="container">
+	<%= c.snapshotInfoTable %>
+</div>
+
+<%= c.displayGraph(c.graphLocalDatabaseSize) %>
+
+<%= c.displayGraph(c.graphCollectorVersion) %>
+
+<div class="new-row list">
+	<%= c.snapTable %>
+</div>

@@ -1,0 +1,27 @@
+<table id="innerfoot">
+	<tfoot>
+		<tr>
+			<td id="showhide" class="left button">
+				<a id="hide" href="?body.navhide=1" onclick="toggleClass('body','navhide',1); return false">Hide Menu</a>
+				<a id="show" href="?body.navhide=0" onclick="toggleClass('body','navhide',1); return false">Show Menu</a>
+			</td>
+			<td class="center"><a href="http://www.minor.is/">&copy;2007 Minor ehf</a></td>
+			<td class="right-fill"></td>
+			<td class="right-bt button byte">
+					<%= c.byteConf %>
+			</td>
+			<td class="right-bt button style">
+					<%= c.styleConf %>
+			</td>
+
+			<td class="right-bt">&#149;</td>
+			<td class="right-bt">&#149;</td>
+			<td class="right-bt">&#149;</td>
+			<td class="right-pad"></td>
+		</tr>
+	</tfoot>
+	<!-- for validation purpose only -->
+	<tbody class="invisible">
+		<tr><td></td></tr>
+	</tbody>
+</table>

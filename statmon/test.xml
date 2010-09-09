@@ -1,0 +1,34 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<config version='1.0'>
+	<statmon>
+		<grapher>
+			<graphStart>180</graphStart>
+			<graphEnd>1</graphEnd>
+			<graphWidth>700</graphWidth>
+			<graphHeight>100</graphHeight>
+		</grapher>
+		<localDB>
+			<user>'statmon'</user>
+			<passwd>'statmon'</passwd>
+			<host>'localhost'</host>
+			<port>3306</port>
+		</localDB>
+		<tsm>
+			<user>'statmon'</user>
+			<pass>'statmon'</pass>
+			<server>'localhost'</server>
+		</tsm>
+		<misc>
+			<actlogIgnoreList>[45778, 147830, 147876]</actlogIgnoreList>
+			<backupHistoryStart>20</backupHistoryStart>
+		</misc>
+	</statmon>
+	<statmon>
+		<localDB>
+			<port>3306</port>
+			<passwd>'funky'</passwd>
+			<user>'statmon'</user>
+			<host>'localhost'</host>
+		</localDB>
+	</statmon>
+</config>

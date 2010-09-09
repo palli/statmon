@@ -1,0 +1,23 @@
+
+<div class="graphs new-row">
+	<div class="left-group">
+		<div class="left-group">
+			<%= c.displayGraph(c.graphDailyBackup) %>
+			<%= c.displayGraph(c.graphDailyRestore) %>
+		</div>
+		<div class="left-group">
+			<%= c.displayGraph(c.graphSessionDuration) %>
+			<%= c.displayGraph(c.graphTransferSpeed) %>
+		</div>
+	</div>
+	<div class="left-group">
+		<div class="left-group">
+			<%= c.displayGraph(c.graphSessionCount) %>
+			<%= c.displayGraph(c.graphNodeCount) %>
+		</div>
+		<div class="left-group">
+			<%= c.displayGraph(c.graphTotalBackup) %>
+			<%= c.displayGraph(c.graphTotalArchive) %>
+		</div>
+	</div>
+</div>

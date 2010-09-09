@@ -1,0 +1,6 @@
+<%
+if c.begin:%><div class="shadow-drop"><%
+%><%= c.content %><%
+if c.end:
+%><div class="shadow-drop-cc"><div class="ie-fix"></div></div><div class="shadow-drop-tl"></div><div class="shadow-drop-top"><div class="ie-fix"></div></div><div class="shadow-drop-tr"></div><div class="shadow-drop-right"><div class="ie-fix"></div></div><div class="shadow-drop-br"></div><div class="shadow-drop-bottom"><div class="ie-fix"></div></div><div class="shadow-drop-bl"></div><div class="shadow-drop-left"><div class="ie-fix"></div></div></div><!-- end shadow-drop --><%
+%>

@@ -1,0 +1,66 @@
+
+<div class="container">
+	<%= c.alertTable %>
+</div>
+
+<div class="new-row list">
+	<table class="list failed_files">
+		<thead class="thead">
+			<tr class="nopretty title <%= c.evenOdd(reset=True) %>">
+				<td class="top" colspan="2">
+					Failed Files
+				</td>
+			</tr>
+			<tr class="top <%= c.evenOdd(reset=True) %>">
+				<td class="title failed_files_col1">Node</td>
+				<td class="title failed_files_col2">Filename</td>
+			</tr>
+		</thead>
+		<tbody >
+<%
+for n,i in c.order:
+%>
+			<!-- Row for <%= i %> -->
+			<tr class="body <%= c.evenOdd() %>">
+				<td class="failed_files_col1"><%= i %></td>
+				<td class="number failed_files_col2">
+			  <div class="showHideButton"> <%= len(c.entries[i]) %> failed files </div>
+				  <div onclick="toggleDisplay('subitem_<%= c.newId()%>'); toggleDisplay('show_<%= c.getId()%>'); toggleDisplay('hide_<%= c.getId()%>');">
+					  <div "id="show_<%= c.getId()%>"> <a name="show_<%= c.getId()%>" href="#show_<%= c.getId()%>">show</a> </div>
+					  <div id="hide_<%= c.getId()%>" class="invisible">  <a name="hide_<%= c.getId()%>" href="#hide_<%= c.getId()%>">hide</a> </div>
+				  </div>
+
+				</td>
+			</tr>
+			<tr class="subitem invisible" id="subitem_<%= c.getId() %>">
+			<td colspan="2" class="nopadding">
+				<!-- All the files for <%= i %> -->
+				<form name="form_<%= i %>">
+				<table width="100%" class="list failed_files">
+					<thead class="thead">
+					<tr class="top <%= c.evenOdd(seed='innertable', reset=True) %>">
+						<td class="title checkbox"><input name="master_checkbox" onchange="SetAllCheckBoxes('form_<%= i %>', 'subitems_<%= i %>', this.checked);" type="checkbox"></td>
+						<td class="title failed_files_col2">Filename</td>
+					</tr>
+					</thead>
+<%
+	for e,x in enumerate(c.entries[i]):
+%>
+					<tr onclick=";" class="body <%= c.evenOdd(seed='innertable') %>">
+						<td class="failed_files_col1"><input type="checkbox" name="subitems_<%= i %>"></td>
+						<td class="failed_files_col2">	<%= x['filename'] %> </td>
+					</tr>
+
+<%
+	#end for
+%>
+				</table>
+				</form>
+			</td>
+			</tr>
+<%
+#end for
+%>
+		</tbody>
+	</table>
+</div>

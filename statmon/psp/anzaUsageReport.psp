@@ -1,0 +1,4 @@
+
+<div class="list">
+<%= c.nodeTable %>
+</div>

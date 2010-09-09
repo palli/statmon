@@ -1,0 +1,19 @@
+
+<div class="container placeholder">
+<%= c.shadowdrop('''
+	<div class="text-box" style="width: 41em; height: 14em; padding: 0">
+		<div class="center-group" style="margin-top:4em; font-weight: bolder;">
+		TODO: Alerts here?<br/>
+		Something else?
+		</div>
+	</div> ''')%>
+</div>
+
+<div class="graphs">
+	<%= c.displayGraph( c.graphStoragePoolUsage ) %>
+	<%= c.displayGraph( c.graphStoragePoolUtilization ) %>
+</div>
+
+<div class="new-row list">
+<%= c.spTable %>
+</div>

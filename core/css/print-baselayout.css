@@ -1,0 +1,18 @@
+/* reset everything to get a common platform */
+* {
+	font-size: inherit;
+	margin: 0;
+	padding: 0;
+	border: 0;
+	list-style: none;
+}
+
+#header, #left, #footer {
+	display: none;
+}
+
+#content {
+	float: left;
+	padding-top: 1em;
+	padding-left: 1.5em;
+}

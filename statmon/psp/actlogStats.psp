@@ -1,0 +1,19 @@
+
+<div class="container">
+	<%= c.alertTable %>
+</div>
+
+<div class="container placeholder">
+<%= c.shadowdrop('''
+	<div class="text-box" style="width: 41em; height: 10em; padding: 0">
+		<div class="center-group" style="margin-top:2em; font-weight: bolder;">
+		TODO: figure out what to do with this space<br/>
+		Resurrect actlog graph?
+<!-- 	???	... profit! -->
+		</div>
+	</div> ''')%>
+</div>
+
+<div class="list new-row">
+	<%= c.actlogStatTable %>
+</div>

@@ -1,0 +1,41 @@
+
+
+<div class="container">
+	<%= c.shadowdrop('''
+		<div class="left-group text-box">
+			<h1>TSM Status Monitor</h1>
+			<h2>Revision %s</h2>
+			<br/>
+			<p>Statmon is written in
+				<a href="http://www.python.org/">Python</a>
+				using 
+				<a href="http://www.modpython.org/">Mod_python</a> for Apache/Python integration,
+				using
+				<a href="http://oss.oetiker.ch/rrdtool/">RRDTool</a> for most graphs,
+				using
+				<a href="http://www.mysql.com/">MySQL</a> for permanent data storage and finally powered by
+				<a href="http://www.apache.org/">Apache</a> on
+				<a href="http://www.gnu.org/">GNU</a>/<a href="http://www.linux.org/">Linux</a>.
+			</p>
+
+			<div class="">
+				<div class="aboutImageContainer">
+					<a id="py" class="aboutImage" href="http://www.python.org/"></a>
+					<a id="modpy" class="aboutImage" href="http://www.modpython.org/"></a>
+					<a id="rrd" class="aboutImage" href="http://oss.oetiker.ch/rrdtool/"></a>
+				</div>
+				<div class="aboutImageContainer">
+					<a id="mysql" class="aboutImage" href="http://www.mysql.com/"></a>
+					<a id="apache" class="aboutImage" href="http://www.apache.org/"></a>
+					<a id="linux" class="aboutImage" href="http://www.gnu.org/gnu/linux-and-gnu.html"></a>
+				</div>
+			</div>
+
+			<div class="left-group new-row">
+				<br/>
+				<p>For more information please contact <a href="mailto:statmon@basis.is">statmon@basis.is</a>.</p>
+			</div>
+		</div>''' % '$Rev: 960 $'.split()[-2:][0] )
+	%>
+</div>
+

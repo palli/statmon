@@ -1,0 +1,138 @@
+
+#header {
+	overflow: visible;
+}
+
+#headshadow {
+	position: absolute;
+	height: 10px;
+	bottom: -10px;
+	left: 0;
+	right: 0;
+	z-index: -1;
+	background-image: url("../img/shadow_drop_bottom.png");
+	background-position: 0 0;
+	background-repeat: repeat-x;
+}
+
+* html #headshadow {
+	width: 100%;
+}
+
+#navshadow-left,
+#navshadow-right {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	width: 10px;
+	z-index: -1;
+	background-image: url("../img/shadow_drop_right.png");
+	background-position: 0 0;
+	background-repeat: repeat-y;
+}
+
+#navshadow-right {
+	right: -11px;
+}
+
+#navshadow-left {
+	left: 0px;
+	z-index: 2;
+}
+
+.shadow-drop {
+	float: left;
+	clear: both;
+	position: relative;
+	height: 1%;
+}
+
+/*#innerleft .shadow-drop {
+	width: 150px;
+}*/
+
+.shadow-drop-tr {
+	position: absolute;
+	top: -2px;
+	right: -10px;
+	height: 15px;
+	width: 10px;
+/* 	background: green; */
+	z-index: -1;
+	background-image: url("../img/shadow_drop_tr.png");
+	background-position: 0 0;
+	background-repeat: no-repeat;
+}
+
+.shadow-drop-right {
+	position: absolute;
+	top: 13px;
+	right: -10px;
+	bottom: 4px;
+	width: 10px;
+/* 	background: blue; */
+	z-index: -1;
+	background-image: url("../img/shadow_drop_right.png");
+	background-position: 0 0;
+	background-repeat: repeat-y;
+}
+
+.shadow-drop-br {
+	position: absolute;
+	right: -10px;
+	bottom: -10px;
+	width: 14px;
+	height: 14px;
+/* 	background: red; */
+	z-index: -1;
+	background-image: url("../img/shadow_drop_br.png");
+	background-position: 0 0;
+	background-repeat: no-repeat;
+}
+
+.shadow-drop-bottom {
+	position: absolute;
+	left: 13px;
+	right: 4px;
+	bottom: -10px;
+	height: 10px;
+/* 	background: green; */
+	z-index: -1;
+	background-image: url("../img/shadow_drop_bottom.png");
+	background-position: 0 0;
+	background-repeat: repeat-x;
+}
+
+.shadow-drop-bl {
+	position: absolute;
+	left: -2px;
+	bottom: -10px;
+	height: 10px;
+	width: 15px;
+/* 	background: blue; */
+	z-index: -1;
+	background-image: url("../img/shadow_drop_bl.png");
+	background-position: 0 0;
+	background-repeat: no-repeat;
+}
+
+#showhide .shadow-drop-bl {
+	width: 11px;
+}
+
+/* suppress menu shadow drop */
+#body.navhide #navshadow-right {
+	display: none;
+}
+
+/*
+* html #navshadow-left,
+* html #navshadow-right,
+* html .shadow-drop-tr,
+* html .shadow-drop-right,
+* html .shadow-drop-br,
+* html .shadow-drop-bottom,
+* html .shadow-drop-bl {
+	background-image: none;
+}
+*/

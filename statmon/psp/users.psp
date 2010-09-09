@@ -1,0 +1,19 @@
+
+
+<form action="<%= c.userRedirect %>" method="POST">
+
+<div class="list">
+	<%= c.shadowdrop( c.addUser ) %>
+</div>
+<input type="hidden" value="1" name="update">
+</form>
+
+<div class="left-group">
+	<div class="container">
+		<%= c.alertTable %>
+	</div>
+</div>
+
+<div class="list new-row">
+<%= c.userTable %>
+</div>

@@ -1,0 +1,29 @@
+
+<form action="<%= c.getSuffix() %>" method="POST">
+
+
+<div class="list">
+	<%= c.shadowdrop( c.addUser ) %>
+</div>
+
+<div class="left-group">
+	<div class="container">
+		<%= c.alertTable %>
+	</div>
+</div>
+
+<div class="list new-row">
+<%= c.nodeTable %>
+</div>
+
+<input type="hidden" value="1" name="update">
+<input type="hidden" value="1" name="updateNodes">
+<%
+for name,item in c.itemsMap.items():
+%>
+<input type="hidden" name="<%= name %>" value="<%= item.val %>"></input>
+<%
+#end
+%>
+
+</form>

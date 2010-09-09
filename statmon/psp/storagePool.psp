@@ -1,0 +1,28 @@
+
+<div class="left-group top-group new-row">
+	<div class="container">
+		<%= c.storagepoolInfoTable %>
+	</div>
+	<%= c.displayGraph( c.graphStoragePoolUsage ) %>
+</div>
+
+<div class="left-group middle-group new-row">
+	<%= c.displayGraph( c.graphStorageUtilization ) %>
+	<div class="container">
+		<%= c.volumeInfoTable %>
+	</div>
+	<%= c.displayGraph( c.graphVolumeCount ) %>
+</div>
+
+<div class="new-row list nodes">
+	<%= c.nodeTable %>
+</div>
+
+<div class="container placeholder">
+<%= c.shadowdrop('''
+	<div class="text-box" style="width: 41em; height: 4em; padding: 0">
+		<div class="center-group" style="margin-top:1em; font-weight: bolder;">
+		TODO: Alerts here?<br/>
+		</div>
+	</div> ''')%>
+</div>

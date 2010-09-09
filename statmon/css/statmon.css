@@ -1,0 +1,259 @@
+.placeholder {
+	display: none;
+}
+
+table.graph td.image {
+	text-align: center;
+}
+
+tr td.new_reg .gant_link {
+	background-image: url("../img/reg.png");
+	background-position: -1px -1px;
+	background-repeat: no-repeat;
+}
+
+tr td.non_reg .gant_link {
+	background-image: url("../img/line.png");
+/* 	background-position: 0 0; */
+	background-repeat: repeat-x;
+}
+
+/* missed */
+tr.even td.schedule_missed {
+	background-color: #ff9898;
+}
+.legends tbody.highlight:hover tr.even td.schedule_missed,
+tbody.highlight tr.even:hover td.schedule_missed {
+	background-color: #ff5b5b;
+}
+tr.odd td.schedule_missed {
+	background-color: #ffafaf;
+}
+tbody.highlight tr.odd:hover td.schedule_missed {
+	background-color: #ff7878;
+}
+
+/* failed */
+tr.even td.schedule_failed {
+	background-color: #ffff98;
+}
+.legends tbody.highlight:hover tr.even td.schedule_failed,
+tbody.highlight tr.even:hover td.schedule_failed {
+	background-color: #ffff5b;
+}
+tr.odd td.schedule_failed {
+	background-color: #ffffaf;
+}
+tbody.highlight tr.odd:hover td.schedule_failed {
+	background-color: #ffff78;
+}
+
+/* success */
+tr.even td.schedule_success {	
+	background-color: #afffaf;
+}
+.legends tbody.highlight:hover tr.even td.schedule_success,
+tbody.highlight tr.even:hover td.schedule_success {
+	background-color: #5bff5b;
+}
+tr.odd td.schedule_success {
+	background-color: #98ff98;
+}
+tbody.highlight tr.odd:hover td.schedule_success {
+	background-color: #78ff78;
+}
+
+#content.node-psp table.proplist td.propname {
+	width: 14em;
+}
+
+#content.overview-psp .top-group table {
+/* 		1/4 */
+	width: 20em;
+	height: 14em;
+}
+
+#content.storagePool-psp table.proplist,
+#content.storagePool-psp .middle-group table,
+#content.snapshots-psp table.proplist,
+#content.clientSchedule-psp table.proplist,
+#content.clientSchedule-psp table.graph {
+/* 		1/3 */
+	width: 27em;
+}
+
+
+#content.clientSchedule-psp table.proplist {
+	height: 30em;
+}
+
+#content.clientSchedule-psp table.graph {
+	height: 14.5em;
+}
+
+#content.storagePool-psp .top-group table.graph {
+/* 		2/3 */
+	width: 55em;
+}
+
+#content.overview-psp .top-group table,
+#content.storagePool-psp table.proplist,
+#content.snapshots-psp table.proplist {
+	height: 14em;
+}
+
+#content.node-psp .small-graphs table.graph,
+#content.overview-psp .middle-group table,
+#content.zoom-psp table.graph {
+	height: 17em;
+	width: 20em;
+}
+
+#content.node-psp .small-graphs thead tr,
+#content.summaryBackupStatistic-psp table.graph thead tr {
+	height: 1.1em;
+}
+
+#content.storagePool-psp .top-group table,
+#content.storagePool-psp .middle-group table,
+#content.node-psp .big-graphs table.graph,
+#content.graphs-psp table.graph,
+#content.userGraphs-psp table.graph,
+#content.domain-psp .big-graphs table.graph,
+#content.storagePools-psp table.graph,
+#content.filespaces-psp table.graph,
+#content.summaryBackupStatistic-psp table.graph {
+	height: 17em;
+}
+
+#content.storagePool-psp .nodes table.list,
+#content.storageAbusers-psp table.list,
+#content.newNodes-psp table.list,
+#content.actlog-psp table.list,
+#content.actlogStats-psp table.list,
+#content.storagePools-psp table.list,
+#content.filespaces-psp table.list,
+#content.clientSchedule-psp table.list,
+#content.clientSchedules-psp table.standardTable,
+#content.snapshots-psp table.list,
+#content div.list table.processlist,
+#content.summaryBackupStatistic-psp table.graph,
+#content.anzaBackupReport-psp table#copygroup_tbl,
+#content.nodelist-psp table#nodes_tbl,
+#content.userNodelist-psp table {
+/* 		1/1 */
+	width: 83em;
+}
+
+#content.overview-psp .container table.newAlertTable,
+#content.actlog-psp table.newAlertTable,
+#content.actlogStats-psp table.newAlertTable,
+#content.storagePool-psp table.list,
+#content.filespaces-psp table.newAlertTable,
+#content.filespaces-psp table.graph,
+#content.graphs-psp table.graph,
+#content.userGraphs-psp table.graph,
+#content.node-psp .big-graphs table.graph,
+#content.domain-psp .big-graphs table.graph,
+#content.storagePools-psp table.graph,
+#content.clientSchedule-psp table.newAlertTable,
+#content.snapshots-psp table.newAlertTable,
+#content.nodelist-psp table.newAlertTable,
+#content.graphs-psp table.newAlertTable,
+#content.sessions-psp table.newAlertTable,
+#content.user-psp table.newAlertTable,
+#content.users-psp table.newAlertTable,
+#content.node-psp div.container table,
+#content.nodelist-psp table#domains_tbl {
+/* 		1/2 */
+	width: 41em;
+}
+
+#content.anzaBackupReport-psp .list .list table
+{
+	width: 40em;
+}
+
+#content.user-psp div.list table,
+#content.users-psp div.list table {
+	float: left;
+	width: 41em;
+}
+
+#content.user-psp div.list table td.propname,
+#content.users-psp div.list table td.propname {
+	width: 100%;
+}
+
+#content.user-psp div.list table td.button input.commit,
+#content.users-psp div.list table td.button input.commit {
+	width: 15em;
+}
+
+#content.login-psp .filter input.text {
+	width: 10em;
+	padding: 0.1em 0.4em 0.1em 0.4em;
+}
+
+#content.anzaBackupReport-psp .left-group > .list {
+	border-left: solid 2px;
+	border-bottom: solid 2px;
+	margin-left: 0.5em;
+	padding: 0.5em;
+	padding-bottom: 0;
+}
+
+#content.anzaBackupReport-psp .left-group .left-group {
+	padding-bottom: 1em;
+}
+
+.aboutImageContainer {
+	float: left;
+}
+
+.aboutImage:hover {
+	background-color: #d9d9ff;
+}
+
+.aboutImage {
+	background-repeat: no-repeat;
+/* 	background-position: 50% 0px; */
+	width: 189px;
+	height: 80px;
+	display: block;
+	float: left;
+}
+
+.aboutImage#py {
+	background-image: url("../img/py.png");
+}
+
+.aboutImage#rrd {
+	background-image: url("../img/rrd.png");
+}
+
+.aboutImage#modpy {
+	background-image: url("../img/modpy.png");
+}
+
+.aboutImage#mysql {
+	background-image: url("../img/mysql.png");
+}
+
+.aboutImage#apache {
+	background-image: url("../img/apache.png");
+}
+
+.aboutImage#linux {
+	background-image: url("../img/linux.png");
+}
+
+.zoom-bt {
+	padding: 0.2em 0.4em;
+	border: 1px solid;
+	margin-left: 1em;
+	margin-bottom: 0.5em;
+	display: block;
+}
+
+

@@ -1,0 +1,19 @@
+
+<div class="container">
+	<%= c.domainInfoTable %>
+</div>
+
+<!-- Here be schedules -->
+<div class="list">
+<%= c.schedulesTable %>
+</div>
+
+<div class="list">
+<%= c.noScheduleTable %>
+</div>
+
+<div class="new-row container">
+	<%= c.alertTable %>
+</div>
+
+<%= c.graphsBox %>

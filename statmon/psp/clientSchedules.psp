@@ -1,0 +1,36 @@
+
+<div class="container placeholder">
+<%= c.shadowdrop('''
+	<div class="text-box" style="width: 40.85em; height: 14em; padding: 0">
+		<div class="center-group" style="margin-top:4em; font-weight: bolder;">
+		TODO: Alerts here?<br/>
+		Something else?
+		</div>
+	</div> ''')%>
+</div>
+
+<div class="container placeholder">
+<%= c.shadowdrop('''
+	<div class="text-box" style="width: 19.85em; height: 14em; padding: 0">
+		<div class="center-group" style="margin-top:4em; font-weight: bolder;">
+		TODO: Custom 'stress' pie here?<br/>
+		</div>
+	</div> ''')%>
+</div>
+
+<div class="container placeholder">
+<%= c.shadowdrop('''
+	<div class="text-box" style="width: 19.85em; height: 14em; padding: 0">
+		<div class="center-group" style="margin-top:4em; font-weight: bolder;">
+		TODO: Custom 'stress' pie here?<br/>
+		</div>
+	</div> ''')%>
+</div>
+
+<div class="list">
+<%= c.csTable %>
+</div>
+
+<div class="list">
+<%= c.nodeTable %>
+</div>

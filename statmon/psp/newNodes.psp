@@ -1,0 +1,43 @@
+
+<div class="container placeholder">
+<%= c.shadowdrop('''
+	<div class="text-box" style="width: 41em; height: 5em; padding: 0">
+		<div class="center-group" style="margin-top:1em; font-weight: bolder;">
+		TODO: Alerts here?<br/>
+		Something else?
+		</div>
+	</div> ''')%>
+</div>
+
+<div class="container placeholder">
+<%= c.shadowdrop('''
+	<div class="text-box" style="width: 41em; height: 5em; padding: 0">
+		<div class="center-group" style="margin-top:1em; font-weight: bolder;">
+		TODO: Add pager and only display a screen fill a time (ca 20)<br/>
+		TODO: Add option to display all<br/>
+		TODO: Add options for different hog factors<br/>
+		</div>
+	</div> ''')%>
+</div>
+
+<div class="container placeholder new-row">
+<%= c.shadowdrop('''
+	<div class="text-box" style="width: 83em; height: 2em; padding: 0">
+		<div class="center-group" style="margin-top:.5em; font-weight: bolder;">
+		TODO: Pages: first : previous : [1] 2 3 : next : last (3)
+		</div>
+	</div> ''')%>
+</div>
+
+<div class="list new-row">
+<%= c.nodeTable %>
+</div>
+
+<div class="container placeholder new-row">
+<%= c.shadowdrop('''
+	<div class="text-box" style="width: 83em; height: 2em; padding: 0">
+		<div class="center-group" style="margin-top:.5em; font-weight: bolder;">
+		TODO: Pages: first : previous : [1] 2 3 : next : last (3)
+		</div>
+	</div> ''')%>
+</div>

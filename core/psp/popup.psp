@@ -1,0 +1,30 @@
+<%
+if c.getLevel() == 0:
+%>
+<ul class="<%= c.getUlClass() %>"><li class="<%= c.getLIClass() %>">
+<%
+# end level zero
+%>
+<div class="marker"></div><%= c.getItem() %>
+<%
+if c.items:
+%>
+		<div class="positioner">
+			<%= c.shadowdrop(begin=True) %><ul class="<%= c.getUlClass(1) %>">
+<%
+	for item in c.items:
+%>
+				<li class="<%= c.getLIClass(item) %>"><%= item %></li>
+<%
+	# end for items
+%>
+			</ul><%= c.shadowdrop(end=True) %>
+		</div>
+<%
+# end if items
+if c.getLevel() == 0:
+%>
+</li></ul>
+<%
+# end level zero
+%>

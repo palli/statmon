@@ -1,0 +1,57 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<config version='1.0'>
+	<!--Configurations for Statmon-->
+	<statmon>
+		<!--Internal Status Varibles - DO NOT EDIT-->
+		<internal>
+			<!--Flag noting that Statmon has not yet been configured-->
+			<unconfigured>True</unconfigured>
+			<!--Full path to config used-->
+			<configFullpath/>
+			<!--Full path to handler used-->
+			<handlerFullpath/>
+			<!--Flag noting that Statmon has failed to load XML config-->
+			<failedToLoad>True</failedToLoad>
+			<!--Flag noting that Statmon has failed to save XML config-->
+			<failedToSave>True</failedToSave>
+		</internal>
+		<!--Settings used by Grapher-->
+		<grapher>
+			<!--Default graph start time in days from current time.-->
+			<graphStart>180</graphStart>
+			<!--Default graph end time in days from current time.-->
+			<graphEnd>1</graphEnd>
+			<!--Default graph width (in pixels).-->
+			<graphWidth>700</graphWidth>
+			<!--Default graph height (in pixels).-->
+			<graphHeight>100</graphHeight>
+		</grapher>
+		<!--Settings for Local MySQL database-->
+		<localDB>
+			<!--Local MySQL username to use.-->
+			<user>'statmon'</user>
+			<!--Local MySQL user password.-->
+			<passwd>'statmon'</passwd>
+			<!--Local MySQL database to use.-->
+			<db>'statmon'</db>
+			<!--Local MySQL host to use.-->
+			<host>'localhost'</host>
+		</localDB>
+		<!--Settings required for TSM collection-->
+		<tsm>
+			<!--TSM user to use when collecting.-->
+			<user>'statmon'</user>
+			<!--TSM user password.-->
+			<pass>'statmon'</pass>
+			<!--TSM server to collect from.-->
+			<server>'localhost'</server>
+		</tsm>
+		<!--Misc Settings-->
+		<misc>
+			<!--Actlog messages-IDs that should never stored. Can dramatically reduce space requirements for local DB, but can also break current or future features that may depend on given message-ID-->
+			<actlogIgnoreList>[45778, 147830, 147876]</actlogIgnoreList>
+			<!--Number of days shown by default when viewing backup history.-->
+			<backupHistoryStart>20</backupHistoryStart>
+		</misc>
+	</statmon>
+</config>

@@ -1,0 +1,72 @@
+
+<div class="filter">
+	<%= c.shadowdrop( c.simpleInput ) %>
+</div>
+
+<div class="container">
+	<%= c.simpleProps %>
+</div>
+
+<div class="container">
+	<%= c.alertTable %>
+</div>
+
+<div class="container new-row" style="padding: 5em 20em;">
+	<div class="button" style="padding: 0.25em 0.5em; border: 1px solid;">
+	<%= c.simplePopUp %>
+	</div>
+</div>
+
+<div class="container">
+	<%= c.shadowdrop('''
+		<div class="test">
+			<div class="test2"></div>
+			Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Curabitur at dolor. Sed vitae mauris sed ante tempus iaculis. Maecenas et nulla accumsan nulla posuere tempus. Praesent fringilla turpis. Sed auctor quam ut pede. Vestibulum nulla. Suspendisse quis libero. Fusce pede velit, dignissim at, rhoncus ac, condimentum vitae, metus. Vivamus vehicula, mi sit amet eleifend sodales, felis est vehicula mauris, at luctus ligula est vel massa. Quisque dapibus. Nam aliquet orci vitae mi. Vivamus egestas libero. Proin egestas nonummy sem. Quisque at massa et lorem nonummy tristique. Vivamus luctus, sem ut mollis interdum, nibh nulla vehicula mi, facilisis auctor ante nunc venenatis tellus. Duis ornare. Sed tincidunt nisi. Nulla viverra felis vitae libero.
+		</div>''' )
+	%>
+</div>
+
+<div class="container">
+	<%= c.shadowdrop('''
+		<div class="test">
+			getBrowserVersion: %s
+		</div>''' % str(c.getBrowserVersion()) )
+	%>
+</div>
+
+<div class="container">
+<%
+globalCount = c.setSessionValue('testCount',c.getSessionValue('testCount',default=1,globalSession=1)+1,globalSession=1)
+localCount = c.setSessionValue('testCount',c.getSessionValue('testCount',default=0,globalSession=0)+1,globalSession=0)
+globalId = c.getSession(globalSession=1).id()
+localId = c.getSession(globalSession=0).id()
+%>
+<%= c.shadowdrop('''
+	<div class="test">
+		Global Session Count: %s (%s)<br/>
+		Local Session Count: %s (%s)
+	</div>''' % (globalCount,globalId,localCount,localId) )
+%>
+</div>
+
+<div class="container">
+<%= c.shadowdrop('''
+	<div class="test">
+		Sessions: %s
+	</div>''' % str(c.getAllSessions()) )
+%>
+</div>
+
+<div class="container">
+	<%= c.shadowdrop('''
+		<div class="test">
+			Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Curabitur at dolor. Fusce pede velit, dignissim at, rhoncus ac, condimentum vitae, metus. Vivamus vehicula, mi sit amet eleifend sodales, felis est vehicula mauris, at luctus ligula est vel massa. Quisque dapibus. Nam aliquet orci vitae mi. Vivamus egestas libero. Proin egestas nonummy sem. Quisque at massa et lorem nonummy tristique. Vivamus luctus, sem ut mollis interdum, nibh nulla vehicula mi, facilisis auctor ante nunc venenatis tellus. Duis ornare. Sed tincidunt nisi. Nulla viverra felis vitae libero.
+		</div>''' )
+	%>
+</div>
+
+
+<div class="list">
+	<%= c.simpleTable %>
+</div>
+

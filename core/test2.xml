@@ -1,0 +1,10 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<root>
+	<description writeOnly='1' type='str'>'The Root'</description>
+	<default writeOnly='1' type='str'>'zero'</default>
+	<subSettings>
+		<sub>
+			<description writeOnly='1' type='str'>'Sub subSettings'</description>
+		</sub>
+	</subSettings>
+</root>

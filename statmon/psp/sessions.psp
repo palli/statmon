@@ -1,0 +1,163 @@
+
+<div class="new-row list">
+<div class="shadow-drop">
+<table class="list processlist" >
+	<thead>
+		<tr class="nopretty title <%= c.evenOdd(reset=True) %>">
+			<td class="title" colspan="<%= 26+c.showSchedules %>">
+				<%= c.tableTitle %>
+			</td>
+		</tr>
+<!--		<tr>
+			<td></td>
+			<td></td>
+			<td colspan="24" style="font-size: 0.5em; width: 43.2em;">foo</td>
+<%
+if c.showSchedules:
+%>
+			<td class="title">Schedule</td>
+<%
+#end if
+%>
+		<tr>-->
+		<tr class="<%= c.evenOdd(reset=True)%>">
+			<td class="title sorted">Entity</td>
+			<td class="title">Activity</td>
+<%
+hcol = ['heven','hodd']
+for i in range(24):
+%>
+			<td class="session <%= hcol[i%2]%>"  style="width: <%= 60*60/2000.0 %>em;">
+				<%= i %>
+			</td>
+<%
+#end for
+if c.showSchedules:
+%>
+			<td class="title">Schedule</td>
+<%
+#end if
+%>
+		</tr>
+	</thead>
+	<tfoot>
+		<tr class="<%= c.evenOdd(reset=True)%>">
+			<td class="title sorted">Entity</td>
+			<td class="title">Activity</td>
+<%
+hcol = ['heven','hodd']
+for i in range(24):
+%>
+			<td class="session <%= hcol[i%2]%>"  style="width: <%= 60*60/2000.0 %>em;">
+				<%= i %>
+			</td>
+<%
+#end for
+if c.showSchedules:
+%>
+			<td class="title">Schedule</td>
+<%
+#end if
+%>
+		</tr>
+	</tfoot>
+	<tbody>
+<%
+for row in c.rows:
+	if row:
+		if row._beginBody and not c.merge:
+%>
+		</tbody><tbody id="<%= row._beginBody %>" class="invisible">
+<%
+		# end begin tbody
+%>
+		<tr class="<%= c.evenOdd(seed=row._class) %> <%= row._class %>" style="white-space: nowrap;">
+<!-- 			<td class="entity sorted <%= row._day %>" style="width: <%= c.maxEntityLength %>em;"> -->
+			<td class="entity sorted <%= row._day %>">
+				<%= row._link( row._entity ) %>
+				<span style="vertical-align: super;"><%= ', '.join(c.sortKeys(row._entityNote.keys())) %>
+				</span></td>
+<!-- 			<td class="activity" style="width: <%= c.maxActivityLength %>em;"> -->
+			<td class="activity">
+<%
+		if row._expandable:
+%>
+				<a href="#" onclick="toggleDisplay('<%= row._expandable %>'); toggleDisplay('<%= row._expandable %>-expand'); toggleDisplay('<%= row._expandable %>-collapse'); return false;">
+					<span id="<%= row._expandable %>-expand">Expand</span>
+					<span id="<%= row._expandable %>-collapse" class="invisible">Collapse</span>
+				</a>
+<%
+		# expandable
+%>
+				<%= row._activity %> (<%= len(row._records) %><%= row._total %>)
+			</td>
+			<td class="session <%= hcol[0%2]%>"><div class="session-anchor">
+<%
+		for record in row._records:
+%>
+				<div class="running-session" style="left: <%= record._offset %>em; width: <%= (100*record._duration/1.8) %>%; z-index:<%= c.newId() %>">
+					<div class="inner-session <%= record._class %>"></div>
+				</div>
+<%
+		#end for
+%>
+			</div></td>
+<%
+		for i in range(23):
+%>
+			<td class="session <%= hcol[(i+1)%2]%>" style="width: <%= 60*60/2000.0 %>em;">
+			</td>
+<%
+		#end for
+%>
+<%
+		if c.showSchedules:
+%>
+<!-- 			<td style="width: <%= c.maxScheduleLength %>em;"> -->
+			<td>
+				<%= c.linkSchedule( row._schedule, row._domain ) %>
+			</td>
+<%
+		#end
+%>
+		</tr>
+<%
+		if row._endBody and not c.merge:
+%>
+		</tbody><tbody>
+<%
+		# end begin tbody
+#end for row
+%>
+	</tbody>
+</table>
+	<div class="shadow-drop-cc"><div class="ie-fix"></div></div>
+	<div class="shadow-drop-tl"></div>
+	<div class="shadow-drop-top"><div class="ie-fix"></div></div>
+	<div class="shadow-drop-tr"></div>
+	<div class="shadow-drop-right"><div class="ie-fix"></div></div>
+	<div class="shadow-drop-br"></div>
+	<div class="shadow-drop-bottom"><div class="ie-fix"></div></div>
+	<div class="shadow-drop-bl"></div>
+	<div class="shadow-drop-left"><div class="ie-fix"></div></div>
+</div><!-- end shadow-drop -->
+</div>
+
+<%
+if c.alertTable:
+%>
+<!-- Here come the alerts -->
+<div class="left-group new-row">
+<%
+	for alertTable in c.alertTables:
+%>
+	<div class="container">
+		<%= alertTable %>
+	</div>
+<%
+	#end for
+%>
+</div> <!-- End of alerts -->
+<%
+#end if
+%>

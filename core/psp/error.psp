@@ -1,0 +1,148 @@
+
+<div class="container">
+	<div class="shadow-drop">
+		<table class="traceback">
+			<thead>
+				<tr class="top title <%= c.evenOdd(reset=True) %>">
+					<td class="nopadding top">
+						<div class="title">
+							<a class="button" href="#"><span class="inactive">&nbsp;</span></a>
+							Cought Unhandled <%= c.etype %> Exception
+						</div>
+					</td>
+				</tr>
+			</thead>
+
+			<tbody>
+				<tr class="<%= c.evenOdd() %>">
+					<td>
+					Sorry, something went wrong in processing your request.<br/>
+					<br/>
+					Report this incident to <a href="mailto:support@basis.is">customer service</a> and a team of highly trained monkeys will dispatched to deal with this situlation. Please include the following traceback:
+					</td>
+				</tr>
+				<tr>
+					<td>Details: <%= c.evalue %></td>
+				</tr>
+				<tr class="<%= c.evenOdd() %>">
+					<td class="center">--- Begin Trace Back ---</td>
+				</tr>
+<%
+for i in c.exception:
+%>
+				<tr class="<%= c.evenOdd() %>">
+					<td><pre class="codeline"><%= i %></pre></td>
+				</tr>
+<%
+#end exception
+%>
+			</tbody>
+		</table>
+		<div class="shadow-drop-cc"><div class="ie-fix"></div></div>
+		<div class="shadow-drop-tl"></div>
+		<div class="shadow-drop-top"><div class="ie-fix"></div></div>
+		<div class="shadow-drop-tr"></div>
+		<div class="shadow-drop-right"><div class="ie-fix"></div></div>
+		<div class="shadow-drop-br"></div>
+		<div class="shadow-drop-bottom"><div class="ie-fix"></div></div>
+		<div class="shadow-drop-bl"></div>
+		<div class="shadow-drop-left"><div class="ie-fix"></div></div>
+	</div><!-- end shadow-drop -->
+</div>
+<%
+if c.psp:
+%>
+<div class="list new-row">
+<%
+	c.psp.display_code()
+%>
+</div>
+<%
+# if psp
+c.frames.reverse()
+for i in c.frames:
+%>
+<div class="list">
+	<div class="shadow-drop">
+		<table class="context">
+			<thead>
+				<tr class="top">
+					<td class="title in">In</td>
+					<td class="title file">File</td>
+					<td class="title func">Func</td>
+					<td class="title param">Parameters</td>
+				</tr>
+				<tr class="frame <%= c.evenOdd(reset=True) %>">
+					<td class="line">Line</td>
+					<td class="file"><a href="file://<%= i.file %>"><%= i.file %></a></td>
+					<td class="func"><%= i.func %></td>
+					<td class="param"><%= i.params %></td>
+				</tr>
+			</thead>
+			<tbody>
+<%
+	for l in i.code:
+%>
+				<tr class="<%= l.mark %> <%= c.evenOdd() %>">
+					<td class="number"><%= l.lnum %></td>
+					<td class="code" colspan="3"><pre class="codeline"><%= l.code %></pre></td>
+				</tr>
+<%
+	#end code lines
+	if i.dump:
+%>
+				<tr class="<%= l.mark %> <%= c.evenOdd() %>"><td colspan="4"><ul class="dump">
+<%
+		for v in i.dump:
+%>
+					<li><%= v %></li>
+<%
+		#end dump
+%>
+				</ul></td></tr>
+<%
+	#end if
+%>
+			</tbody>
+		</table>
+		<div class="shadow-drop-cc"><div class="ie-fix"></div></div>
+		<div class="shadow-drop-tl"></div>
+		<div class="shadow-drop-top"><div class="ie-fix"></div></div>
+		<div class="shadow-drop-tr"></div>
+		<div class="shadow-drop-right"><div class="ie-fix"></div></div>
+		<div class="shadow-drop-br"></div>
+		<div class="shadow-drop-bottom"><div class="ie-fix"></div></div>
+		<div class="shadow-drop-bl"></div>
+		<div class="shadow-drop-left"><div class="ie-fix"></div></div>
+	</div><!-- end shadow-drop -->
+</div>
+<%
+#end frames
+%>
+
+<div class="container">
+	<div class="shadow-drop">
+		<table class="traceback">
+			<tfoot>
+				<tr class="<%= c.evenOdd(reset=True) %>">
+					<td>&nbsp;</td>
+				</tr>
+			</tfoot>
+			<tbody>
+				<tr class="<%= c.evenOdd() %>">
+					<td class="center">--- End Trace Back ---</td>
+				</tr>
+			</tbody>
+		</table>
+		<div class="shadow-drop-cc"><div class="ie-fix"></div></div>
+		<div class="shadow-drop-tl"></div>
+		<div class="shadow-drop-top"><div class="ie-fix"></div></div>
+		<div class="shadow-drop-tr"></div>
+		<div class="shadow-drop-right"><div class="ie-fix"></div></div>
+		<div class="shadow-drop-br"></div>
+		<div class="shadow-drop-bottom"><div class="ie-fix"></div></div>
+		<div class="shadow-drop-bl"></div>
+		<div class="shadow-drop-left"><div class="ie-fix"></div></div>
+	</div><!-- end shadow-drop -->
+</div>
+

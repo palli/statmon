@@ -1,0 +1,4 @@
+
+<div class="graph" id="<%= c.graphId %>">
+	<%= c.content %>
+</div> <!--end graph-->

@@ -1,0 +1,132 @@
+
+<div class="container legends">
+	<div class="shadow-drop">
+		<table class="list">
+			<thead>
+				<tr class="nopretty title <%= c.evenOdd(reset=True) %>">
+					<td class="top" colspan="<%= 2+len(c.days) %>">
+						Legend
+					</td>
+				</tr>
+			</thead>
+			<tbody class="highlight">
+				<tr class="top <%= c.evenOdd() %>">
+					<td class="gant_box schedule_success">&nbsp;</td>
+					<td rowspan="2">Success</td>
+					<td class="gant_box schedule_failed">&nbsp;</td>
+					<td rowspan="2">Failed</td>
+					<td class="gant_box schedule_missed">&nbsp;</td>
+					<td rowspan="2">Missed</td>
+					<td class="gant_box schedule_none">&nbsp;</td>
+					<td rowspan="2">No Backup Made</td>
+				</tr>
+				<tr class="top <%= c.evenOdd() %>">
+					<td class="gant_box schedule_success">&nbsp;</td>
+					<td class="gant_box schedule_failed">&nbsp;</td>
+					<td class="gant_box schedule_missed">&nbsp;</td>
+					<td class="gant_box schedule_none">&nbsp;</td>
+				</tr>
+<!--				<tr class="top <%= c.evenOdd() %>">
+					<td colspan="8">&nbsp;</td>
+				</tr>-->
+				<tr class="top <%= c.evenOdd() %>">
+					<td colspan="2"></td>
+					<td class="gant_box schedule_none non_reg"><span class="gant_link"></span></td>
+					<td colspan="3">Non-Existant</td>
+					<td class="gant_box schedule_none new_reg"><span class="gant_link"></span></td>
+					<td colspan="3">Registered</td>
+				</tr>
+			</tbody>
+		</table>
+		<div class="shadow-drop-cc"><div class="ie-fix"></div></div>
+		<div class="shadow-drop-tl"></div>
+		<div class="shadow-drop-top"><div class="ie-fix"></div></div>
+		<div class="shadow-drop-tr"></div>
+		<div class="shadow-drop-right"><div class="ie-fix"></div></div>
+		<div class="shadow-drop-br"></div>
+		<div class="shadow-drop-bottom"><div class="ie-fix"></div></div>
+		<div class="shadow-drop-bl"></div>
+		<div class="shadow-drop-left"><div class="ie-fix"></div></div>
+	</div><!-- end shadow-drop -->
+</div>
+
+<div class="list new-row">
+	<div class="shadow-drop">
+		<table class="list">
+			<thead>
+				<tr class="nopretty title <%= c.evenOdd(reset=True) %>">
+					<td class="top" colspan="<%= 2+len(c.days) %>">
+						Backup Status
+					</td>
+				</tr>
+				<tr class="top <%= c.evenOdd() %>">
+					<td class="empty"></td>
+					<td class="empty sorted"></td>
+<%
+last = None
+counter = 0
+for date in c.days:
+	if last and date.month != last:
+%>
+					<td colspan="<%= counter %>" ><%= c.getMonth(last) %></td>
+<%
+		counter = 1
+	else:
+		counter += 1
+	last = date.month
+# end for
+%>
+					<td colspan="<%= counter %>" ><%= c.getMonth(last) %></td>
+				</tr>
+				<tr class="top <%= c.evenOdd() %>">
+					<td class="title node_name">
+						<a class="tablelink"  onclick="this.blur(); return sortTable('backupHistoryTbl',0,true);">
+							Node Name
+						</a>
+					</td>
+					<td class="title sorted desc">
+						<a class="tablelink" onclick="this.blur(); return sortTable('backupHistoryTbl',1,true);">
+							Last Success
+						</a>
+					</td>
+<%
+for date in c.days:
+%>
+					<td class="fixed_font <%= c.getWeekday(date) %>"><%= date.strftime('%d') %></td>
+<%
+# end for
+%>
+				</tr>
+			</thead>
+			<tfoot></tfoot>
+			<tbody class="highlight" id="backupHistoryTbl">
+<%
+for hostname in c.hosts:
+%>
+				<tr class="body <%= c.evenOdd() %>">
+					<td class="text"><%= c.linkNode( hostname ) %></td>
+					<td class="date sorted"><%= c.last_success.get(hostname,'Never') %></td>
+<%
+	for date in c.days:
+%>
+					<td class="gant_box <%= c.getClassValue(hostname,date) %>"><%= c.linkActlog(message=hostname,start=c.parseDate(date),end=c.parseDate(date+c.day)) %></td>
+<%
+	# end for
+%>
+				</tr>
+<%
+# end for
+%>
+			</tbody>
+		</table>
+		<div class="shadow-drop-cc"><div class="ie-fix"></div></div>
+		<div class="shadow-drop-tl"></div>
+		<div class="shadow-drop-top"><div class="ie-fix"></div></div>
+		<div class="shadow-drop-tr"></div>
+		<div class="shadow-drop-right"><div class="ie-fix"></div></div>
+		<div class="shadow-drop-br"></div>
+		<div class="shadow-drop-bottom"><div class="ie-fix"></div></div>
+		<div class="shadow-drop-bl"></div>
+		<div class="shadow-drop-left"><div class="ie-fix"></div></div>
+	</div><!-- end shadow-drop -->
+</div>

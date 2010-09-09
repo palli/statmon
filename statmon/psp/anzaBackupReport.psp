@@ -1,0 +1,27 @@
+
+<div class="list">
+	<%= c.copygroups %>
+</div>
+
+<div class="left-group">
+<%
+for i in c.nodeList:
+%>
+	<div class="left-group" >
+		<h2 class="header"><%= i %> </h2>
+		<div class="list">
+			<div class="list filespaces" >
+<!-- 				<h3 class="header">Filespaces</h3> -->
+				<%= c.filespaces[i] %>
+			</div>
+			<div class="list clientopts" >
+<!-- 				<h3 class="header">Options </h3> -->
+				<%= c.clientopts[i] %>
+			</div>
+		</div>
+	</div>
+
+<%
+# end for
+%>
+</div>

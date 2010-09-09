@@ -1,0 +1,54 @@
+
+<%
+if c.alertTable:
+%>
+<!-- Here come the alerts -->
+<div class="left-group new-row">
+<%
+	for alertTable in c.alertTables:
+%>
+	<div class="container">
+		<%= alertTable %>
+	</div>
+<%
+	#end for
+%>
+</div> <!-- End of alerts -->
+<%
+#end if
+%>
+
+<div class="invisible" id="graphnodes" onclick="toggleDisplay('graphnodes');toggleClass('content','overflow-auto');">
+	<div class="fixed-tint"></div>
+	<div class="float-above">
+	
+	<div class="inner-float-above">
+		<div class="list new-row" >
+			<%= c.nodeTable %>
+		</div>
+	</div>
+	</div>
+</div>
+
+<div class="graphs new-row big-graphs">
+	<div class="left-group">
+		<div class="left-group">
+			<%= c.displayGraph(c.graphDailyBackup) %>
+			<%= c.displayGraph(c.graphDailyRestore) %>
+		</div>
+		<div class="left-group">
+			<%= c.displayGraph(c.graphSessionDuration) %>
+			<%= c.displayGraph(c.graphTransferSpeed) %>
+		</div>
+	</div>
+	<div class="left-group">
+		<div class="left-group">
+			<%= c.displayGraph(c.graphSessionCount) %>
+			<%= c.displayGraph(c.graphNodeCount) %>
+		</div>
+		<div class="left-group">
+			<%= c.displayGraph(c.graphTotalBackup) %>
+			<%= c.displayGraph(c.graphTotalArchive) %>
+		</div>
+	</div>
+</div>

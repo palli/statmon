@@ -1,0 +1,5 @@
+<%= c.CVSLineDump(c._headers, lambda x: x.sname) %><%
+for row in c._rows:
+%><%= c.CVSLineDump(row[:-2], lambda x: x[c.formatIndex]) %><%
+#end for rows
+%>

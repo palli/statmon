@@ -1,0 +1,24 @@
+
+<table id="menu" class="menu">
+<%
+for i in c.getNavItems():
+	if i.isVisible():
+%>
+	<tr class="<%= i.getClass() %>"><td>
+<%
+		if i.isLinkable():
+%>
+		<a class="inner-box" href="<%= i.getLink(c) %>"><%= i.getTitle(c) %></a>
+<%
+		else:
+%>
+		<span class="inner-box"><%= i.getTitle(c) %></span>
+<%
+		# end if else
+%>
+	</td></tr>
+<%
+# end for
+%>
+</table>
+

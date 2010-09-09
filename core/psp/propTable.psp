@@ -1,0 +1,26 @@
+<!-- begin propTable.psp -->
+	<table  class="proplist">
+		<thead>
+			<tr class="top title <%= c.evenOdd(reset=True) %>">
+				<td class="nopadding top" colspan="2">
+					<div class="title">
+						<a class="button" href="#"><span class="inactive">&nbsp;</span></a>
+						<%= c.title %>
+					</div>
+				</td>
+			</tr>
+		</thead>
+		<tbody class="highlight">
+<%
+for row in c._rows:
+%>
+			<tr class="body <%= c.evenOdd() %>">
+				<td class="propname"><%= row.name %></td>
+				<td class="propval"><%= row.val %></td>
+			</tr>
+<%
+# end for
+%>
+		</tbody>
+	</table>
+<!-- end propTable.psp -->

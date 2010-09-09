@@ -1,0 +1,246 @@
+/* random: 0.010685 */
+
+body {
+	color:#555;
+}
+
+input, select {
+	border-color:#999;
+}
+
+#footer a,
+#left a, input, select {
+	color:#555;
+}
+
+a,
+#footer a:hover,
+#content a,
+#left a:hover {
+	color:#545090;
+}
+
+#content a:hover {
+	color:#5a50f0;
+}
+
+#body thead tr.title td a {
+	color:#eee;
+}
+
+#body thead tr.title a:hover {
+	color:#c2c0e0;
+}
+
+thead tr.title .button {
+	background-color:#309198;
+}
+
+thead tr.title .button:hover {
+	background-color:#16777e;
+}
+
+tfoot td.button {
+	background-color:#e2fdff; /* metalic overlayed with pure blue */
+}
+
+tfoot td.button:hover {
+	background-color:#c8fbff;
+}
+
+#header {
+	border-color:#999;
+}
+
+#footer {
+	border-color:#999;
+}
+
+#body {
+	background-color:#f5f6f5;
+}
+
+#left {
+	background-color:#eee;
+	border-color:#999;
+}
+
+#menu-container .menu {
+	background-color:#f5f5f5;
+}
+
+#menu-container .menu tr:hover,
+#menu-container .menu tr.active,
+#menu-container .menu tr.hasActiveChild {
+	/* single overlay */
+	background-color:#dbd9ff;
+}
+
+#menu-container .menu tr.active:hover,
+#menu-container .menu tr.hasActiveChild:hover {
+	/* double overlay */
+	background-color:#8d86ff;
+}
+
+#menu-container .menu tr.grandparent {
+	background-color:#c3cc48;
+}
+
+#menu-container .menu tr.grandparentActive,
+#menu-container .menu tr.grandparent:hover {
+	background-color:#acb348;
+}
+
+div.text-box,
+.filter td.proptype div,
+table,
+td,
+#body td .button {
+	border-color:#999;
+}
+
+thead tr.title td {
+	color:#eee;
+	background-color:#4bacb3;
+}
+
+thead tr td,
+tfoot tr td {
+	background-color:#f0feff; /* metalic */
+}
+
+thead td:hover,
+thead td.sorted,
+tfoot td.sorted {
+	background-color:#e2fdff; /* metalic overlayed with pure blue */
+}
+
+thead td.sorted:hover {
+	background-color:#c8fbff;
+}
+
+tbody tr.even {
+	background-color:#efefef;
+}
+
+tbody tr.evenChecked {
+	background-color:#f4f6e1;
+}
+
+tbody tr.evenPending {
+	background-color:#f6e3e2;
+}
+
+tbody tr.odd {
+	background-color:#f9f9f9;
+}
+
+tbody tr.oddChecked {
+	background-color:#fafbf3;
+}
+
+tbody tr.oddPending {
+	background-color:#fbf3fa;
+}
+
+tbody tr.even td.sorted {
+	background-color:#e0e0ef;
+}
+
+tbody tr.evenChecked td.sorted {
+	background-color:#e3e7aa;
+}
+
+tbody tr.evenPending td.sorted {
+	background-color:#e7aeab;
+}
+
+tbody tr.oddChecked td.sorted {
+ 	background-color:#f4f6e1;
+}
+
+tbody tr.oddPending td.sorted {
+ 	background-color:#f6e3e2;
+}
+
+/* highlighting */
+.legends tbody.highlight:hover tr.even,
+tbody.highlight tr.even:hover {
+	/* even overlayed with pure blue */
+	background-color:#c6c3ff;
+}
+tbody.highlight tr.odd:hover {
+	/* odd overlayed with pure blue */
+	background-color:#d5d3ff;
+}
+tbody.highlight tr.even:hover td.sorted {
+	/* even double overlayed with pure blue */
+	background-color:#9e98ff;
+}
+tbody.highlight tr.odd:hover td.sorted {
+	/* odd double overlayed with pure blue */
+	background-color:#b4afff;
+}
+
+/* hover - checked */
+tbody.highlight tr.evenChecked:hover {
+	background-color:#cfd66c;
+}
+
+tbody.highlight tr.oddChecked:hover {
+	background-color:#dae090;
+}
+
+tbody.highlight tr.evenChecked:hover td.sorted {
+	background-color:#c3cc48;
+}
+
+tbody.highlight tr.oddChecked:hover td.sorted {
+	background-color:#cfd66c;
+}
+
+/* hover - pending */
+tbody.highlight tr.evenPending:hover {
+	background-color:#cfd66c;
+}
+
+tbody.highlight tr.oddPending:hover {
+	background-color:#dae090;
+}
+
+tbody.highlight tr.evenPending:hover td.sorted {
+	background-color:#c3cc48;
+}
+
+tbody.highlight tr.oddPending:hover td.sorted {
+	background-color:#cfd66c;
+}
+
+span.good {
+/* 	#555 + 50% dodge pure green */
+	color:#55a95a;
+}
+span.poor {
+/* 	#555 + 50% dodge pure yellow + 50% dodge pure red */
+	color:#cad355;
+}
+span.bad,
+.filter td.badval {
+/* 	#555 + 50% dodge pure red */
+	color:#a95a55;
+}
+
+div.text-box {
+	background-color: white;
+}
+
+thead td.sunday,
+thead td.saturday {
+	color:#905450;
+}
+
+td.sunday,
+td.saturday {
+	color:#804440;
+}
+

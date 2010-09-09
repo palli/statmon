@@ -1,0 +1,43 @@
+#!/usr/bin/python
+
+settings = 'basis'
+#settings = 'gentest'
+#settings = 'emptydb'
+
+graph_start = 30*2
+
+if settings == 'basis':
+	tsm_username = "palli"
+	tsm_password = "palli"
+	tsm_server = "eisbock"
+	local_username = "statmon"
+	local_password = "statmon"
+	local_db = "statmon"
+	local_host = "statmon.basis.is"
+
+if settings == 'gentest':
+	tsm_username = None
+	tsm_password = None
+	local_username = "gentest"
+	local_password = "gentest"
+	local_db = "gentest"
+	local_host = "statmon.basis.is"
+	graph_start = 365*4
+
+if settings == 'emptydb':
+	tsm_username = None
+	tsm_password = None
+	local_username = "emptydb"
+	local_password = "emptydb"
+	local_db = "emptydb"
+	local_host = "statmon.basis.is"
+	graph_start = 365*4
+
+# Graph stuff, dont change unless you know what you are doing
+graph_width = '700' # Default width of graphs
+graph_height = '100'
+
+# This is a comma seperated list of msgno to ignore when fetching actlog
+# Keeping this list up to date should greatly improve statmon performance
+# when searching activity log
+actlog_ignore_msgs = [ 45778, 147830, 147876 ]

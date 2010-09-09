@@ -1,0 +1,41 @@
+Index: calendar/calendar.js
+===================================================================
+--- calendar/calendar.js	(revision 765)
++++ calendar/calendar.js	(working copy)
+@@ -746,6 +746,36 @@
+ 	}
+ 	div.appendChild(table);
+ 
++	/* begin shadow drop */
++	var shadow_cc = Calendar.createElement("div");
++	var shadow_top = Calendar.createElement("div");
++	var shadow_tr = Calendar.createElement("div");
++	var shadow_right = Calendar.createElement("div");
++	var shadow_br = Calendar.createElement("div");
++	var shadow_bottom = Calendar.createElement("div");
++	var shadow_bl = Calendar.createElement("div");
++	var shadow_left = Calendar.createElement("div");
++	var shadow_tl = Calendar.createElement("div");
++	shadow_cc.className = "shadow-drop-cc";
++	shadow_top.className = "shadow-drop-top";
++	shadow_tr.className = "shadow-drop-tr";
++	shadow_right.className = "shadow-drop-right";
++	shadow_br.className = "shadow-drop-br";
++	shadow_bottom.className = "shadow-drop-bottom";
++	shadow_bl.className = "shadow-drop-bl";
++	shadow_left.className = "shadow-drop-left";
++	shadow_tl.className = "shadow-drop-tl";
++	div.appendChild(shadow_cc);
++	div.appendChild(shadow_top);
++	div.appendChild(shadow_tr);
++	div.appendChild(shadow_right);
++	div.appendChild(shadow_br);
++	div.appendChild(shadow_bottom);
++	div.appendChild(shadow_bl);
++	div.appendChild(shadow_left);
++	div.appendChild(shadow_tl);
++	/* end shadow drop */
++
+ 	var thead = Calendar.createElement("thead", table);
+ 	var cell = null;
+ 	var row = null;

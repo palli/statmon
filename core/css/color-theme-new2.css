@@ -1,0 +1,246 @@
+/* rnd: (0.897026,0.140599,0.486249) */
+
+body {
+	color:#565656;
+}
+
+input, select {
+	border-color:#9a9a9a;
+}
+
+#footer a,
+#left a, input, select {
+	color:#565656;
+}
+
+a,
+#footer a:hover,
+#content a,
+#left a:hover {
+	color:#56809a;
+}
+
+#content a:hover {
+	color:#65bcf2;
+}
+
+#body thead tr.title td a {
+	color:#fff;
+}
+
+#body thead tr.title a:hover {
+	color:#d4e2ea;
+}
+
+thead tr.title .button {
+	background-color:#3399a3;
+}
+
+thead tr.title .button:hover {
+	background-color:#177787;
+}
+
+tfoot td.button {
+	background-color:#ffffff; /* metalic overlayed with pure blue */
+}
+
+tfoot td.button:hover {
+	background-color:#e9fffc;
+}
+
+#header {
+	border-color:#9a9a9a;
+}
+
+#footer {
+	border-color:#9a9a9a;
+}
+
+#body {
+	background-color:#ffffff;
+}
+
+#left {
+	background-color:#fff;
+	border-color:#9a9a9a;
+}
+
+#menu-container .menu {
+	background-color:#ffffff;
+}
+
+#menu-container .menu tr:hover,
+#menu-container .menu tr.active,
+#menu-container .menu tr.hasActiveChild {
+	/* single overlay */
+	background-color:#fbfdff;
+}
+
+#menu-container .menu tr.active:hover,
+#menu-container .menu tr.hasActiveChild:hover {
+	/* double overlay */
+	background-color:#a2dbff;
+}
+
+#menu-container .menu tr.grandparent {
+	background-color:#d0ae57;
+}
+
+#menu-container .menu tr.grandparentActive,
+#menu-container .menu tr.grandparent:hover {
+	background-color:#ba9d53;
+}
+
+div.text-box,
+.filter td.proptype div,
+table,
+td,
+#body td .button {
+	border-color:#9a9a9a;
+}
+
+thead tr.title td {
+	color:#fff;
+	background-color:#57b4b9;
+}
+
+thead tr td,
+tfoot tr td {
+	background-color:#ffffff; /* metalic */
+}
+
+thead td:hover,
+thead td.sorted,
+tfoot td.sorted {
+	background-color:#ffffff; /* metalic overlayed with pure blue */
+}
+
+thead td.sorted:hover {
+	background-color:#e9fffc;
+}
+
+tbody tr.even {
+	background-color:#ffffff;
+}
+
+tbody tr.evenChecked {
+	background-color:#fefdfb;
+}
+
+tbody tr.evenPending {
+	background-color:#fefcfd;
+}
+
+tbody tr.odd {
+	background-color:#ffffff;
+}
+
+tbody tr.oddChecked {
+	background-color:#ffffff;
+}
+
+tbody tr.oddPending {
+	background-color:#ffffff;
+}
+
+tbody tr.even td.sorted {
+	background-color:#f6f9fa;
+}
+
+tbody tr.evenChecked td.sorted {
+	background-color:#ede0c0;
+}
+
+tbody tr.evenPending td.sorted {
+	background-color:#edc1dd;
+}
+
+tbody tr.oddChecked td.sorted {
+ 	background-color:#fefdfb;
+}
+
+tbody tr.oddPending td.sorted {
+ 	background-color:#fefcfd;
+}
+
+/* highlighting */
+.legends tbody.highlight:hover tr.even,
+tbody.highlight tr.even:hover {
+	/* even overlayed with pure blue */
+	background-color:#e3f4ff;
+}
+tbody.highlight tr.odd:hover {
+	/* odd overlayed with pure blue */
+	background-color:#f4fbff;
+}
+tbody.highlight tr.even:hover td.sorted {
+	/* even double overlayed with pure blue */
+	background-color:#b5e3ff;
+}
+tbody.highlight tr.odd:hover td.sorted {
+	/* odd double overlayed with pure blue */
+	background-color:#ceecff;
+}
+
+/* hover - checked */
+tbody.highlight tr.evenChecked:hover {
+	background-color:#dbc17e;
+}
+
+tbody.highlight tr.oddChecked:hover {
+	background-color:#e6d4a5;
+}
+
+tbody.highlight tr.evenChecked:hover td.sorted {
+	background-color:#d0ae57;
+}
+
+tbody.highlight tr.oddChecked:hover td.sorted {
+	background-color:#dbc17e;
+}
+
+/* hover - pending */
+tbody.highlight tr.evenPending:hover {
+	background-color:#db7eb5;
+}
+
+tbody.highlight tr.oddPending:hover {
+	background-color:#e6a5cb;
+}
+
+tbody.highlight tr.evenPending:hover td.sorted {
+	background-color:#d0579f;
+}
+
+tbody.highlight tr.oddPending:hover td.sorted {
+	background-color:#db7eb5;
+}
+
+span.good {
+/* 	#555 + 50% dodge pure green */
+	color:#91b061;
+}
+span.poor {
+/* 	#555 + 50% dodge pure yellow + 50% dodge pure red */
+	color:#d86b66;
+}
+span.bad,
+.filter td.badval {
+/* 	#555 + 50% dodge pure red */
+	color:#b06191;
+}
+
+div.text-box {
+	background-color: white;
+}
+
+thead td.sunday,
+thead td.saturday {
+	color:#9a5680;
+}
+
+td.sunday,
+td.saturday {
+	color:#89456f;
+}
+

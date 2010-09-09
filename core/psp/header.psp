@@ -1,0 +1,39 @@
+
+<table id="innerhead">
+	<thead>
+		<tr class="title">
+			<td class="left"><%=c.parent.getStatus() %></td>
+<%
+if c.inputBox:
+%>
+			<td class="left-fill"></td>
+<%
+#end if
+%>
+			<td class="title"><%= c.title %></td>
+<%
+if c.inputBox:
+%>
+			<td class="right-fill"></td>
+			<td id="showhide-filter" class="right-bt button">
+				<a id="hide-filter" href="?filterhide=1" onclick="toggleClass('header','filterhide'); return false">Hide Filter</a>
+				<a id="show-filter" href="?filterhide=0" onclick="toggleClass('header','filterhide'); return false">Show Filter</a>
+			</td>
+			<td class="right-pad"></td>
+<%
+else:
+%>
+			<td class="right"></td>
+<%
+#end if
+%>
+		</tr>
+	</thead>
+	<!-- for validation purpose only -->
+	<tbody class="invisible">
+		<tr><td></td></tr>
+	</tbody>
+</table>
+<div id="input-box">
+	<div class="container"><%= c.shadowdrop( c.inputBox ) %></div>
+</div>

@@ -1,0 +1,9 @@
+
+<div class="left-group">
+	<%= c.displayGraph(c.graphSessionActivityCount) %>
+	<%= c.displayGraph(c.graphSessionActivityTXRate) %>
+</div>
+
+<div class="container new-row">
+	<%= c.summaryTable %>
+</div>

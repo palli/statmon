@@ -1,0 +1,100 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<config>
+	<statmon description='Configurations for Statmon'>
+		<internal 'Internal Status Varibles - DO NOT EDIT'>
+			<description writeOnly='1' type='str'></description>
+			<unconfigured>
+						<description writeOnly='1' type='str'>'Flag noting that Statmon has not yet been configured'</description>
+						<default writeOnly='1' type='bool'>True</default>
+					</unconfigured>
+					<configFullpath>
+						<description writeOnly='1' type='str'>'Full path to config used'</description>
+					</configFullpath>
+					<handlerFullpath>
+						<description writeOnly='1' type='str'>'Full path to handler used'</description>
+					</handlerFullpath>
+					<failedToLoad>
+						<description writeOnly='1' type='str'>'Flag noting that Statmon has failed to load XML config'</description>
+						<default writeOnly='1' type='bool'>True</default>
+					</failedToLoad>
+					<failedToSave>
+						<description writeOnly='1' type='str'>'Flag noting that Statmon has failed to save XML config'</description>
+						<default writeOnly='1' type='bool'>True</default>
+					</failedToSave>
+				</internal>
+				<grapher>
+					<description writeOnly='1' type='str'>'Settings used by Grapher'</description>
+					<subSettings>
+						<graphStart>
+							<description writeOnly='1' type='str'>'Default graph start time in days from current time.'</description>
+							<default writeOnly='1' type='int'>180</default>
+						</graphStart>
+						<graphEnd>
+							<description writeOnly='1' type='str'>'Default graph end time in days from current time.'</description>
+							<default writeOnly='1' type='int'>1</default>
+						</graphEnd>
+						<graphWidth>
+							<description writeOnly='1' type='str'>'Default graph width (in pixels).'</description>
+							<default writeOnly='1' type='int'>700</default>
+						</graphWidth>
+						<graphHeight>
+							<description writeOnly='1' type='str'>'Default graph height (in pixels).'</description>
+							<default writeOnly='1' type='int'>100</default>
+						</graphHeight>
+					</subSettings>
+				</grapher>
+				<localDB>
+					<description writeOnly='1' type='str'>'Settings for Local MySQL database'</description>
+					<subSettings>
+						<user>
+							<description writeOnly='1' type='str'>'Local MySQL username to use.'</description>
+							<default writeOnly='1' type='str'>'statmon'</default>
+						</user>
+						<passwd>
+							<description writeOnly='1' type='str'>'Local MySQL user password.'</description>
+							<default writeOnly='1' type='str'>'statmon'</default>
+						</passwd>
+						<db>
+							<description writeOnly='1' type='str'>'Local MySQL database to use.'</description>
+							<default writeOnly='1' type='str'>'statmon'</default>
+						</db>
+						<host>
+							<description writeOnly='1' type='str'>'Local MySQL host to use.'</description>
+							<default writeOnly='1' type='str'>'localhost'</default>
+						</host>
+					</subSettings>
+				</localDB>
+				<tsm>
+					<description writeOnly='1' type='str'>'Settings required for TSM collection'</description>
+					<subSettings>
+						<user>
+							<description writeOnly='1' type='str'>'TSM user to use when collecting.'</description>
+							<default writeOnly='1' type='str'>'statmon'</default>
+						</user>
+						<pass>
+							<description writeOnly='1' type='str'>'TSM user password.'</description>
+							<default writeOnly='1' type='str'>'statmon'</default>
+						</pass>
+						<server>
+							<description writeOnly='1' type='str'>'TSM server to collect from.'</description>
+							<default writeOnly='1' type='str'>'localhost'</default>
+						</server>
+					</subSettings>
+				</tsm>
+				<misc>
+					<description writeOnly='1' type='str'>'Misc Settings'</description>
+					<subSettings>
+						<actlogIgnoreList>
+							<description writeOnly='1' type='str'>'Actlog messages-IDs that should never stored. Can dramatically reduce space requirements for local DB, but can also break current or future features that may depend on given message-ID'</description>
+							<default writeOnly='1' type='list'>[45778, 147830, 147876]</default>
+						</actlogIgnoreList>
+						<backupHistoryStart>
+							<description writeOnly='1' type='str'>'Number of days shown by default when viewing backup history.'</description>
+							<default writeOnly='1' type='int'>20</default>
+						</backupHistoryStart>
+					</subSettings>
+				</misc>
+			</subSettings>
+		</statmon>
+	</subSettings>
+</config>

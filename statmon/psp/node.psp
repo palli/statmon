@@ -1,0 +1,114 @@
+
+<%
+if c.nodeInfoTable:
+%>
+<div class="container" >
+	<%= c.nodeInfoTable %>
+</div>
+
+<div style="left-group">
+
+	<!-- Here be filespaces -->
+	<div class="container" >
+		<%= c.filespaceTable %>
+	</div>
+
+	<!-- Here be schedules -->
+	<div class="container">
+		<%= c.schedulesTable %>
+	</div>
+</div>
+<%
+#end if
+%>
+
+<!-- Here come the alerts -->
+<div class="left-group new-row">
+<%
+for alertTable in c.alertTables:
+%>
+	<div class="container">
+		<%= alertTable %>
+	</div>
+<%
+#end
+%>
+</div> <!-- End of alerts -->
+
+<%
+if c.foundNodes:
+%>
+<div class="new-row list">
+	<%= c.foundNodes %>
+</div>
+<%
+#end if
+%>
+
+<%
+if c.graphs:
+%>
+<%= c.sessionsTable %>
+
+<div class="new-row left-group">
+	<!-- Here be graph for each filespace -->
+	<div class="graphs small-graphs">
+<!--		Used / Capacity details for <%= len(c.fsUsedList) %> filespaces 
+		<span onclick="toggleDisplay('filespaces1'); toggleDisplay('show1'); toggleDisplay('hide1');">
+			  <span id="show1"> (<a href="#">show details</a>) </span>
+			  <span id="hide1" class="invisible">  (<a href="#">hide details</a>) </span>
+		</span>-->
+		<div class="graphs altcolor" id="filespaces1">
+<%
+	for x in c.fsUsedList:
+%>
+			<%= c.displayGraph(x) %>
+<%
+	#end for
+%>
+		</div>
+	</div>
+	<div class="graphs small-graphs">
+<!--		Storage details for <%= len(c.fsStorageList) %> filespaces 
+		<span onclick="toggleDisplay('filespaces2'); toggleDisplay('show2'); toggleDisplay('hide2');">
+			<span id="show2"> (<a href="#">show details</a>) </span>
+			<span id="hide2" class="invisible">  (<a href="#">hide details</a>) </span>
+		</span>-->
+		<div class="graphs" id="filespaces2" >
+<%
+	for x in c.fsStorageList:
+%>
+			<%= c.displayGraph(x) %>
+<%
+	#end for
+%>
+		</div>
+	</div>
+
+	<!-- Here be graphs -->
+	<div class="graphs big-graphs new-row">
+		<div class="left-group">
+			<div class="left-group">
+				<%= c.displayGraph(c.graphDailyBackup) %>
+				<%= c.displayGraph(c.graphDailyRestore) %>
+			</div>
+			<div class="left-group">
+				<%= c.displayGraph(c.graphSessionDuration) %>
+				<%= c.displayGraph(c.graphTransferSpeed) %>
+			</div>
+		</div>
+		<div class="left-group">
+			<div class="left-group">
+				<%= c.displayGraph(c.graphSessionSuccessRate) %>
+				<%= c.displayGraph(c.graphFilespacesStorage) %>
+			</div>
+			<div class="left-group">
+				<%= c.displayGraph(c.graphTotalBackup) %>
+				<%= c.displayGraph(c.graphTotalArchive) %>
+			</div>
+		</div>
+	</div>
+</div>
+<%
+# end if graphs
+%>

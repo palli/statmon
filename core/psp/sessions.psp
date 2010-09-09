@@ -1,0 +1,10 @@
+
+<%
+for session in c.sessions:
+%>
+<div class="container">
+	<%= session %>
+</div>
+<%
+# end for
+%>

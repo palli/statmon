@@ -1,0 +1,31 @@
+
+<h1 class="header">Self tests</h1>
+
+<h1 class="header">Stuff</h1>
+<div class="selftest">
+<%
+for i in c.tests:
+%>
+	<div class="selftest_row">
+		<div class="selftest_name"><%= i.name %> </div>
+		<div class="selftest_status selftest_<%= i.status %>"><a title="<%= i.detail %>"><%= i.status %></a> </div>
+		<div class="selftest_detail"><%= i.detail %> </div>
+	</div>
+<%
+# end for
+%>
+
+
+<h1 class="header">Class Dir</h1>
+<%
+for i in dir(c):
+%>
+	<div class="selftest_row">
+		<div class="selftest_name"><%= i %> </div>
+		<div class="selftest_status"><%= c.testeval(i) %> </div>
+		<div class="selftest_detail"><%= i %> </div>
+	</div>
+<%
+# end for
+%>
+</div>

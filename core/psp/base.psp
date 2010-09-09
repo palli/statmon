@@ -1,0 +1,82 @@
+<!-- Put IE into quirks mode -->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta content="text/html; charset=utf-8" http-equiv="content-type" />
+	<meta http-equiv="Page-Enter" content="blendTrans(Duration=0.2)"/>
+	<meta http-equiv="Page-Exit" content="blendTrans(Duration=0.2)"/>
+	<title><%=c.getTitle(reverseOrder=True)%></title>
+<%
+for (sheetRel,sheetHref,sheetId,sheetClass,sheetMedia,sheetMisc) in c._extraSheets:
+%>
+	<link rel="<%= sheetRel %>" type="text/css" href="<%= sheetHref %>" id="<%= sheetId %>" class="<%= sheetClass %>" media="<%= sheetMedia %>" <%= sheetMisc %>/>
+<%
+# end for
+%>
+<!-- workarounds for ie6 and older -->
+<!--[if lt IE 7]>
+	<style>
+		#foot,#head,
+		#footshadow,#headshadow,
+		#menu div,#navshadow-left,#navshadow-right,
+		td,div.shadow-drop div,img {
+			behavior: url("<%=c.homePrefixIt('js/iepngfix.htc')%>")
+		}
+	</style>
+<![endif]-->
+	<link rel="shortcut icon" href="<%=c.homePrefixIt('img/favicon.png')%>" />
+	<script type="text/javascript"><!--
+		var basepath = "<%= c.getBasepath() %>";
+	--></script>
+	<script type="text/javascript" src="<%=c.homePrefixIt('js/utils.js')%>"></script>
+
+	<!-- JS calendar stuff -->
+	<link rel="stylesheet" type="text/css" href="<%=c.homePrefixIt('js/calendar/skins/aqua/theme.css')%>" media="screen" />
+	<script type="text/javascript" src="<%= c.homePrefixIt('js/calendar/calendar.js')%>"></script>
+	<script type="text/javascript" src="<%= c.homePrefixIt('js/calendar/lang/calendar-en.js')%>"></script>
+	<script type="text/javascript" src="<%= c.homePrefixIt('js/calendar/calendar-setup.js')%>"></script>
+
+</head>
+
+<body id="body" class="<%= c.getToggleClass('body','navhide') %>">
+
+<!-- begin optional root level injected content -->
+	<%= c.injectedContent %>
+<!-- end optional root level injected content -->
+
+<div id="header" class="<%= c.header.getClass() %>">
+	<!-- begin head include -->
+	<%= c.header.getContent() %>
+	<!-- end head include -->
+	<div id="headshadow"></div>
+</div>
+
+<div id="footer" class="<%= c.footer.getClass() %>">
+	<div id="footshadow"></div>
+	<!-- begin foot include -->
+	<%= c.footer.getContent() %>
+	<!-- end foot include -->
+</div>
+
+<div id="left" class="<%= c.nav.getClass() %>">
+	<div id="innerleft">
+		<div id="menu-container">
+			<!-- begin nav include -->
+			<%= c.shadowdrop( c.nav.getContent() ) %>
+			<!--end nav include-->
+		</div>
+	</div>
+	<div id="navshadow-left"></div>
+	<div id="navshadow-right"></div>
+</div>
+
+<div id="content" class="overflow-auto <%= c.content.getClass() %>">
+	<!-- begin content include -->
+	<%= c.content %>
+	<!--end content include-->
+	<div id="contentshadow-right"></div>
+	<div class="spacer">&nbsp;</div>
+</div>
+</body>
+</html>
+

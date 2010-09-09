@@ -1,0 +1,136 @@
+<h1>Statmon User Guide</h1>
+<% '' %>
+<h2>Welcome to Statmon</h2>
+Statmon is a web-based solution to the problem of managing backups on Tivoli Storage Manager. It offers an easy to use view of backup history, status and trends over time. Statmon helps storage administrators and the operation team to get their jobs done faster and better.
+
+<h2>Using Statmon</h2>
+	To launch statmon open up a web browser, like Firefox and point it towards the URL where Statmon was installed, (for example http://statmon.basis.is/).
+	<p>
+	When Statmon page has loaded you will see a display similar to this:
+	<img src="userguide/images/PrimaryPage.png"/>
+
+	<h3>Navigating Around Statmon</h3>
+	This section tells you how to use various features of Servergraph web-site
+		<h4> Menubar</h4>
+		The Menubar is located on the left-hand side of the Web browser window. This tree contains a series of menus that a re accessed by clicking on elements of the tree.
+		
+		Elements that are shown in <b>bold</b> text are elements that contain sub-menus. The Menubar may contain the following major sections:
+		<img src="userguide/images/NavigationTree.png"/>
+		
+		<ul>
+		 <li>  Main --- The main page  </li> 
+		 <li>  Nodelist --- List of all nodes in your backup environment </li> 
+		 <li>  Graphs --- Long-term history of your backup environment </li> 
+		 <li>  Storage pools --- List of all storage pools in your backup environment </li> 
+		 <li>  Storage abusers --- Quickly lets you identify which backup nodes are filling up your backup storage </li> 
+		 <li>  Backup History --- Show a list of backup schedules and allows you to determine which nodes are not successfully backed up </li> 
+		 <li>  Failed Files --- Shows a list of failed files on nodes </li> 
+		</ul>
+		
+		<h4> Primary Page</h4>
+		The window on the right-hand side of the browser screen is the Primary Page. Clicking on an item in the Menubar loads the Primary Page with relevant display.
+		
+		<img src="userguide/images/PrimaryPage.png">
+	
+	<h3>Context Sensitive Help</h3>
+	As you navigate through Statmon, you will find that each screen contains context-sensitive help to guide you through the operation or provide additional explanations. Most pages have a help button located at the top-right side of the screen that takes you to a help page specific to that screen.
+
+<h2>Major Sections</h2>
+In this section we describe the major areas that are pre-configured in Statmon and discuss how to interpret the information that is provided by Statmon. each major function that is pre-configured with Statmon will be covered in detail in the following sections.
+	
+	<h3>Main Page</h3>
+	This page shows a high-level summary of system backups and number of nodes registered on the system.
+	<img src="userguide/images/PrimaryPage.png">
+	
+	
+	<h3>Node List</h3>
+	This page displays the list of all nodes that registered on the TSM server. The page contains two tables; Domains and Nodes. You can control which nodes to display on the nodes table by checking in the checkbox next to the domains you want to view.
+	
+	<img src="userguide/images/NodeList.png">
+	
+	
+		<h4> Domains</h4>
+		This table contains the following columns:
+		<ul>
+		  <li>  Name --- The name of the domain </li> 
+		  <li>  Default Class --- The default management class of the domain </li> 
+		  <li>  Nodes --- The number of nodes on this domain </li> 
+		  <li>  Total Backup --- The total amount that all nodes on this domain occupy in backup </li> 
+		  <li>  Total Archive --- The total amount that all nodes on this domain occupy in archive </li>  
+		  <li>  Total Storage --- The combined amount of backup and archive </li>  
+		</ul>
+		
+		<h4> List of selected nodes< /h4>
+		This table contains the following columns:
+		<ul>
+			<li>  Name --- The name of the node </li>  
+			<li>  Domain --- The domain this node belongs to </li>  
+			<li>  OS --- The Operating system running on this node </li>  
+			<li>  Client Version --- The version of TSM client this node is running </li> 
+			<li>  Last Backup --- The last time this node checked in </li>  
+			<li>  Total Backup --- The total amount of data this node occupies on the server </li>  
+			<li>  Total Archive --- The total amount of data this node occupies in archive </li>  
+			<li>  Total Storage --- The combined amount of backup and archive </li> 
+		</ul>
+	<h3>Graphs</h3>
+	This page contains a number of graphs that have created by data collected from the TSM server. These include:
+	
+	<img src="userguide/images/Graphs.png"/>
+	
+	<h4> Number of Nodes</h4>
+	This graphs shows how number of registered nodes has grown over time. Nodes are categorized by operating system and displayed at the bottom.
+	<img src="userguide/images/NodesCount.png"/>
+	
+	<h4> Daily Number of Sessions</h4>  This graph shows how the number of concurrent sessions grows over time. The legend on the Y-axis indicated the sum of connection over the period of a whole day.
+	
+	<img src="userguide/images/SessionCount.png"/>
+	<h4> Daily Amount Restored</h4>
+	 This graph shows how the amount of data restored every day develops. The legend on the Y-axis shows the sum of all data restored over the period of one day.
+	
+	<img src="userguide/images/DailyRestored.png"/>
+	<h4> Daily Amount Backed Up</h4>
+	This graph shows how the amount of data backed up every day develops. The legend on the Y-axis shows the sum of all data backed up over the period of one day.
+	
+	<img src="userguide/images/DailyBackup.png"/>
+	
+	<h4> Total Amount in Backup</h4>
+	This graph shows the total amount of data that is stored on the TSM server. This figure includes any duplication pools that might be present. 
+	
+	<img src="userguide/images/TotalBackup.png"/>
+	
+	<h4> Total Amount in Archive</h4>
+	This graph shows the total amount of data that is archived on the TSM server. This figure includes any duplication pools that might be present. 
+	<img src="userguide/images/TotalArchive.png"/>
+	
+	
+	<h3>Backup Status</h3>
+	This page shows the backup status of all schedules over the past days. Each day in this table is given a different color which marks the status of the backup for that particular node.
+	
+	<ul>
+	  <li>  Green --- Backup was successful </li> 
+	  <li>  Yellow --- Backup failed</li> 
+	  <li>  Red --- Backup Missed </li> 
+	  <li>  Gray --- No backup was scheduled</li> 
+	</ul>
+	
+	<img src="userguide/images/BackupStatus.png"/>
+	
+	
+	<h3>Storage Abusers</h3>
+	This page lists all nodes that are registered on the TSM server. By default these are sorted by the amount of data that they occupy on the server. The nodes are displayed in a table that has the following columns:
+	
+	<ul>
+	 <li>  Name --- The name of the node </li>  
+	<li>  Domain --- The domain this node belongs to </li>  
+	<li>  Total Backup --- The amount of data occupied in server backup storage </li>  
+	<li>  Total Archive --- The amount of data occupied in the server archive storage </li>  
+	<li>  Total Storage --- The combined amount of total backup and total archive</li> 
+	<li>  Ratio --- The ratio between filespace usage and total storage.</li> 
+	<li>  Hog Factor --- A weighted ratio between total storage and filespace usage. This factor gives machines with more total storage higher factor. The table is by default sorted by Hog factor. </li> 
+	</ul>
+	
+	<img src="userguide/images/StorageAbusers.png"/>
+	<h3>Failed Files</h3>
+	This page lists all files that failed during the last 24 hours. When you first load the page you have a table with nodes on the left-side column and on the right can see how many files failed for that particular node. If you want more detail which specific files have failed, you can click the show button for that particular node.
+	<img src="userguide/images/FailedFiles.png"/>
+

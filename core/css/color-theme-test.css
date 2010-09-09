@@ -1,0 +1,248 @@
+/* rnd: (0.599999,0.246909,0.555785) */
+
+body {
+	color:#555;
+}
+
+input, select {
+	border-color:#999;
+}
+
+#footer a,
+#left a, input, select {
+	color:#555;
+}
+
+a,
+#footer a:hover,
+#content a,
+#left a:hover {
+	color:#507890;
+}
+
+#content a:hover {
+	color:#50b5f0;
+}
+
+#body thead tr.title td a {
+	color:#eee;
+}
+
+#body thead tr.title a:hover {
+	color:#c0d4e0;
+}
+
+thead tr.title .button {
+	background-color:#307598;
+}
+
+thead tr.title .button:hover {
+	background-color:#165a7e;
+}
+
+tfoot td.button {
+	background-color:#e2f6ff; /* metalic overlayed with pure blue */
+}
+
+tfoot td.button:hover {
+	background-color:#c8edff;
+}
+
+#header {
+	border-color:#999;
+}
+
+#footer {
+	border-color:#999;
+}
+
+#body {
+	background-color:#f5f5f6;
+}
+
+#left {
+	background-color:#eee;
+	border-color:#999;
+}
+
+ul.level0 li li,
+#menu-container .menu {
+	background-color:#f5f5f5;
+}
+
+ul.level0 li li:hover,
+#menu-container .menu tr:hover,
+#menu-container .menu tr.active,
+#menu-container .menu tr.hasActiveChild {
+	/* single overlay */
+	background-color:#d9f1ff;
+}
+
+#menu-container .menu tr.active:hover,
+#menu-container .menu tr.hasActiveChild:hover {
+	/* double overlay */
+	background-color:#86d2ff;
+}
+
+#menu-container .menu tr.grandparent {
+	background-color:#486fcc;
+}
+
+#menu-container .menu tr.grandparentActive,
+#menu-container .menu tr.grandparent:hover {
+	background-color:#4868b3;
+}
+
+div.text-box,
+.filter td.proptype div,
+table,
+td,
+#body td .button {
+	border-color:#999;
+}
+
+thead tr.title td {
+	color:#eee;
+	background-color:#4b90b3;
+}
+
+thead tr td,
+tfoot tr td {
+	background-color:#f0faff; /* metalic */
+}
+
+thead td:hover,
+thead td.sorted,
+tfoot td.sorted {
+	background-color:#e2f6ff; /* metalic overlayed with pure blue */
+}
+
+thead td.sorted:hover {
+	background-color:#c8edff;
+}
+
+tbody tr.even {
+	background-color:#efefef;
+}
+
+tbody tr.evenChecked {
+	background-color:#e1e7f6;
+}
+
+tbody tr.evenPending {
+	background-color:#e2ebf6;
+}
+
+tbody tr.odd {
+	background-color:#f9f9f9;
+}
+
+tbody tr.oddChecked {
+	background-color:#f3f5fb;
+}
+
+tbody tr.oddPending {
+	background-color:#f3f7fb;
+}
+
+tbody tr.even td.sorted {
+	background-color:#e0e9ef;
+}
+
+tbody tr.evenChecked td.sorted {
+	background-color:#aabce7;
+}
+
+tbody tr.evenPending td.sorted {
+	background-color:#abc5e7;
+}
+
+tbody tr.oddChecked td.sorted {
+ 	background-color:#e1e7f6;
+}
+
+tbody tr.oddPending td.sorted {
+ 	background-color:#e2ebf6;
+}
+
+/* highlighting */
+.legends tbody.highlight:hover tr.even,
+tbody.highlight tr.even:hover {
+	/* even overlayed with pure blue */
+	background-color:#c3e9ff;
+}
+tbody.highlight tr.odd:hover {
+	/* odd overlayed with pure blue */
+	background-color:#d3efff;
+}
+tbody.highlight tr.even:hover td.sorted {
+	/* even double overlayed with pure blue */
+	background-color:#98d9ff;
+}
+tbody.highlight tr.odd:hover td.sorted {
+	/* odd double overlayed with pure blue */
+	background-color:#afe1ff;
+}
+
+/* hover - checked */
+tbody.highlight tr.evenChecked:hover {
+	background-color:#6c8bd6;
+}
+
+tbody.highlight tr.oddChecked:hover {
+	background-color:#90a8e0;
+}
+
+tbody.highlight tr.evenChecked:hover td.sorted {
+	background-color:#486fcc;
+}
+
+tbody.highlight tr.oddChecked:hover td.sorted {
+	background-color:#6c8bd6;
+}
+
+/* hover - pending */
+tbody.highlight tr.evenPending:hover {
+	background-color:#6c99d6;
+}
+
+tbody.highlight tr.oddPending:hover {
+	background-color:#90b2e0;
+}
+
+tbody.highlight tr.evenPending:hover td.sorted {
+	background-color:#4880cc;
+}
+
+tbody.highlight tr.oddPending:hover td.sorted {
+	background-color:#6c99d6;
+}
+
+span.good {
+/* 	#555 + 50% dodge pure green */
+	color:#5568a9;
+}
+span.poor {
+/* 	#555 + 50% dodge pure yellow + 50% dodge pure red */
+	color:#5583d3;
+}
+span.bad,
+.filter td.badval {
+/* 	#555 + 50% dodge pure red */
+	color:#5579a9;
+}
+
+div.text-box {
+	background-color: white;
+}
+
+thead td.sunday,
+thead td.saturday {
+	color:#506c90;
+}
+
+td.sunday,
+td.saturday {
+	color:#405c80;
+}
+

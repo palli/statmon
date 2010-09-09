@@ -1,0 +1,166 @@
+
+body {
+	color: #eee;
+}
+
+input, select {
+	border-color: #800;
+}
+
+#body thead tr.title td a {
+	color: #eee;
+}
+
+a {
+	color: #eee;
+}
+
+input, select {
+	color: #555;
+}
+
+#head a:hover {
+	color: #ecc;
+}
+
+#footer a:hover,
+#content a:hover,
+#left a:hover {
+	color: #ecc;
+}
+
+thead tr.title .button {
+	background-color: #222;
+}
+
+thead tr.title .button:hover {
+	background-color: #333;
+}
+
+tfoot td.button {
+	background-color: #400;
+}
+
+tfoot td.button:hover {
+	background-color: #500;
+}
+
+#head {
+	border-color: #800;
+}
+
+#footer {
+	border-color: #800;
+}
+
+#body {
+	background-color: #800;
+}
+
+#left {
+	background-color: #800;
+	border-color: #800;
+}
+
+#menu-container .menu {
+	background-color: #500;
+}
+
+#menu-container .menu tr:hover,
+#menu-container .menu tr.active,
+#menu-container .menu tr.hasActiveChild {
+	/* single overlay */
+	background-color: #600;
+}
+
+#menu-container .menu tr.active:hover,
+#menu-container .menu tr.hasActiveChild:hover {
+	/* double overlay */
+	background-color: #700;
+}
+
+#menu-container .menu tr.grandparent {
+	background-color: #600;
+}
+
+#menu-container .menu tr.grandparentActive,
+#menu-container .menu tr.grandparent:hover {
+	background-color: #500;
+}
+
+div.text-box,
+.filter td.proptype div,
+table,
+td,
+#body td .button {
+	border-color: #800;
+}
+
+thead tr.title td {
+	color: #eee;
+	background-color: #111;
+}
+
+thead tr td,
+tfoot tr td {
+	background-color: #600; /* metalic */
+}
+
+thead td:hover,
+thead td.sorted,
+tfoot td.sorted {
+	background-color: #500; /* metalic overlayed with pure blue */
+}
+
+thead td.sorted:hover {
+	background-color: #400;
+}
+
+tbody tr.even {
+	background-color: #500;
+}
+
+tbody tr.odd {
+	background-color: #400;
+}
+
+tbody tr.even td.sorted {
+	background-color:#300;
+}
+tbody tr.odd td.sorted {
+ 	background-color:#200;
+}
+
+/* highlighting */
+tbody.highlight tr.even:hover {
+	background-color:#200;
+}
+tbody.highlight tr.odd:hover {
+	background-color:#300;
+}
+tbody.highlight tr.even:hover td.sorted {
+	background-color:#200;
+}
+tbody.highlight tr.odd:hover td.sorted {
+	background-color:#100;
+}
+
+span.good {
+/* 	color: #5cd65c; */
+}
+span.poor {
+/* 	color: #f8b421; */
+}
+span.bad,
+.filter td.badval {
+	color: #d65c5c;
+}
+
+.text-box {
+	background-color: #300;
+}
+
+td.sunday,
+td.saturday {
+	color: #faa;
+}
