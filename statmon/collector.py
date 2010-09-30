@@ -51,12 +51,13 @@ def main():
 	tsm = datasource.TSMDatasource(logger=l)
 	local = datasource.MySQLDataSource(logger=l)
 	
+	# Removed Log class from Jobs,Db
 	Jobs = [Filespaces, Filespaces_snapshots,
 				Storagepools, Storagepools_snapshots,
 				Domains_snapshots,Nodes_snapshots,
 					Domains,Nodes,Occupancy_snapshot,Summary,
 					Volumes, Volumes_snapshots,Actlog,
-					Status,Log,Db,Client_schedules,Associations,
+					Status,Client_schedules,Associations,
 					LocalDBSize
 				]
 	Jobs += [Clientopts,Cloptsets,Bu_Copygroups]
@@ -185,6 +186,9 @@ class Filespaces(Job):
     items = 'node_name,filespace_id,filespace_name,filespace_type'
     selectQuery = 'select %s from filespaces'
     insertQuery = "insert into filespaces (snap_id,%s) values (%s,%s) on duplicate key update snap_id=VALUES(snap_id), %s"
+    def process(self):
+        for i in self.results:
+            if i[0] == None: i[0] = "''"
 class Storagepools(Job):
     items = 'stgpool_name, pooltype, devclass,nextstgpool, access,description,ovflocation,cache,collocate'
     selectQuery = 'select %s from stgpools'
@@ -205,10 +209,16 @@ class Volumes(Job):
     items = 'volume_name,stgpool_name,devclass_name,est_capacity_mb,scaledcap_applied,pct_utilized,status,access,pct_reclaim,scratch,error_state,num_sides,times_mounted,write_pass,last_write_date,last_read_date,pending_date,write_errors,read_errors,location,mvslf_capable,chg_time,chg_admin,begin_rclm_date,end_rclm_date'
     selectQuery = 'select %s from volumes'
     insertQuery = "INSERT INTO volumes (snap_id,%s) VALUES(%s,%s) ON DUPLICATE KEY UPDATE snap_id=VALUES(snap_id), %s"
+    def process(self):
+        for i in self.results:
+            if i[0] == None: i[0] = "''"
 class Filespaces_snapshots(Job):
     items = 'node_name,filespace_id,capacity,pct_util,backup_start,backup_end,delete_occurred'
     selectQuery = 'select %s from filespaces'
     insertQuery = "insert into filespaces_snapshots (snap_id,%s) values (%s,%s) on duplicate key update %s"
+    def process(self):
+        for i in self.results:
+            if i[0] == None: i[0] = "''"
 class Nodes_snapshots(Job):    
     items = 'node_name, domain_name, client_version, client_release,client_level, client_sublevel,option_set'
     selectQuery =  'select %s from nodes'
@@ -222,8 +232,9 @@ class Storagepools_snapshots(Job):
     selectQuery = 'select %s from stgpools'
     insertQuery = "INSERT INTO stgpools_snapshots (snap_id,%s) VALUES(%s,%s) ON DUPLICATE KEY UPDATE %s"
 class Status(Job):
-    items = 'server_name , server_hla , server_url , availability , actlogretention, summaryretention , licensecompliance , scheduler , eventretention , platform , version, release, level, sublevel'
+    items = 'server_name , server_hla , availability , actlogretention, summaryretention , licensecompliance , scheduler , eventretention , platform , version, release, level, sublevel'
     selectQuery = 'select %s from status'
+    #selectQuery = ' select server_name , server_hla , availability , actlogretention, summaryretention , licensecompliance , scheduler , eventretention , platform , version, release, level, sublevel from status'
     insertQuery = "INSERT INTO status (snap_id,%s) VALUES(%s,%s) ON DUPLICATE KEY UPDATE %s"
     translationScheme = { 'level':'server_level', 'release':'server_release', 'sublevel':'server_sublevel', 'version':'server_version'  }
 class Db(Job):
@@ -231,7 +242,10 @@ class Db(Job):
     selectQuery = 'select %s from db'
     insertQuery = "INSERT INTO db (dummy_key,snap_id,%s) VALUES(1,%s,%s) ON DUPLICATE KEY UPDATE %s"
 class Log(Job):
+    # These are the column names in TSM 5.x
     items = 'avail_space_mb , capacity_mb , max_extension_mb , max_reduction_mb , pct_utilized , max_pct_utilized'
+    # For TSM 6.x log table has changed
+    items = 'total_space_mb , used_space_mb , free_space_mb , active_log_dir , mirror_log_dir , afailover_log_dir , arch_log_dir '
     selectQuery = 'select %s from log'
     insertQuery = "INSERT INTO log (dummy_key,snap_id,%s) VALUES(1,%s,%s) ON DUPLICATE KEY UPDATE %s"    
 class Cloptsets(Job):

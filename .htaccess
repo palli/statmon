@@ -1,0 +1,4 @@
+SetHandler mod_python
+PythonHandler statmonHandler::handler
+PythonDebug On
+PythonInterpPerDirective On
